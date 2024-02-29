@@ -1,0 +1,13 @@
+[{
+    "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wg-easy.png",
+    "title": "Wireguard Easy",
+    "description": "The easiest way to run WireGuard VPN + Web-based Admin UI",
+    "category": "VPN",
+    "default_stack": "wg-easy",
+    "stacks": {
+        "wg-easy": {
+            "title": "Wireguard Easy",
+            "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wg-easy.yaml" 
+        }
+    }
+}]

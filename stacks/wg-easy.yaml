@@ -1,0 +1,62 @@
+services:
+  "{{STACK_NAME}}_wg":
+    environment:
+      - "LANG={{WG_LANGUAGE}}"
+      - "WG_HOST={{WG_HOST}}"
+      - "PASSWORD={{WG_PASSWORD}}"
+      - "WG_DEFAULT_DNS=1.1.1.1"
+      - "WG_DEVICE={{WG_DEVICE}}"
+    image: ghcr.io/wg-easy/wg-easy
+    volumes:
+      - "{{WG_STORAGE}}:/etc/wireguard"
+    cap_add:
+      - "NET_ADMIN"
+      - "SYS_MODULE"
+    sysctls:
+      - "net.ipv4.ip_forward=1"
+      - "net.ipv4.conf.all.src_valid_mark=1"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wg-easy.png"
+  name: "Wireguard Easy"
+  description: "The easiest way to run WireGuard VPN + Web-based Admin UI" 
+  readme_description:  "\n# WireGuard Easy\n\n## Features\n\n* All-in-one: WireGuard + Web UI.\n* Easy installation, simple to use.\n* List, create, edit, delete, enable & disable clients.\n* Show a client's QR code.\n* Download a client's configuration file.\n* Statistics for which clients are connected.\n* Tx/Rx charts for each connected client.\n* Gravatar support.\n* Automatic Light / Dark Mode\n"
+  iframe_video_embed: ""
+  variables:
+    WG_LANGUAGE:
+      title: "Language"
+      description: "The language to use for the web interface"
+      default: "en"
+      type: options
+      options:
+      - title: English
+        value: en
+      - title: German
+        value: de
+      - title: Spanish
+        value: es
+      - title: French
+        value: fr
+    WG_HOST:
+      title: "Wireguard Host"
+      description: "The hostname or IP address of the Wireguard server"
+      default: ""
+      type: text
+      options:
+    WG_PASSWORD:
+      title: "Password"
+      description: "The password for the Wireguard server"
+      default: ""
+      type: text
+      options:
+    WG_DEVICE:
+      title: "Wireguard Device"
+      description: "Ethernet device the wireguard traffic should be forwarded through."
+      default: "eth1"
+      type: text
+      options:
+    WG_STORAGE:
+      title: "Storage"
+      description: "The storage location for the Wireguard configuration"
+      default: ""
+      type: volume
+      options:
