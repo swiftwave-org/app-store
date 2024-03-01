@@ -2,6 +2,7 @@ services:
   "{{STACK_NAME}}_wg":
     environment:
       - "LANG={{WG_LANGUAGE}}"
+      - "WEBUI_HOST={{WEBUI_HOST}}"
       - "WG_HOST={{WG_HOST}}"
       - "PASSWORD={{WG_PASSWORD}}"
       - "WG_DEFAULT_DNS=1.1.1.1"
@@ -36,9 +37,15 @@ docs:
         value: es
       - title: French
         value: fr
+    WEBUI_HOST:
+      title: "Wireguard Host"
+      description: "Domain or IP address for web UI"
+      default: ""
+      type: text
+      options:
     WG_HOST:
       title: "Wireguard Host"
-      description: "The hostname or IP address of the Wireguard server"
+      description: "IP address of your VPN server"
       default: ""
       type: text
       options:
