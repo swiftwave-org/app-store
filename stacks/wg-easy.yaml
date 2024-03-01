@@ -37,15 +37,9 @@ docs:
         value: es
       - title: French
         value: fr
-    WEBUI_HOST:
-      title: "Wireguard UI Host"
-      description: "Domain or IP address for web UI"
-      default: ""
-      type: text
-      options:
     WG_HOST:
       title: "Wireguard Host"
-      description: "IP address of your VPN server"
+      description: "The public hostname of your VPN server"
       default: ""
       type: text
       options:
