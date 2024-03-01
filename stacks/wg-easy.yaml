@@ -38,7 +38,7 @@ docs:
       - title: French
         value: fr
     WEBUI_HOST:
-      title: "Wireguard Host"
+      title: "Wireguard UI Host"
       description: "Domain or IP address for web UI"
       default: ""
       type: text
