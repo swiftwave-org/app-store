@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check args
         run: |
-          IFS=' ' read -r -a args <<< ${{ github.event.comment.body }}
+          IFS=' ' read -r -a args <<< "${{ github.event.comment.body }}"
           if [ ${#args[@]} -ne 3 ]; then
             echo "Invalid number of arguments. Usage: $0 \"/build <app_name> <version>\""
           fi
