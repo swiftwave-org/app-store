@@ -11,28 +11,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check args
+        id: check-args
         run: |
           IFS=' ' read -r -a args <<< "${{ github.event.comment.body }}"
           if [ ${#args[@]} -ne 3 ]; then
             echo "Invalid number of arguments. Usage: $0 \"/build <app_name> <version>\""
+            exit 1
           fi
           app_name="${args[1]}"
           version="${args[2]}"
           if [ -z "$app_name" ] || [ -z "$version" ]; then
               echo "App name or version is blank."
+              exit 1
           fi
           echo "APP_NAME=$app_name" >> $GITHUB_ENV
           echo "VERSION=$version" >> $GITHUB_ENV
           echo "Parsed arguments: App Name: $app_name, Version: $version"
 
-      - name: Add reaction
-        uses: peter-evans/create-or-update-comment@v4
-        with:
-          comment-id: ${{ github.event.comment.id }}
-          reactions: "+1"
       - name: Trigger build
+        id: trigger-build
         run: |
           curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/${{ github.repository }}/actions/workflows/build-image.yml/dispatches \
           -d '{"ref":"main", "inputs":{"app_name":"${{ env.APP_NAME }}", "version": "${{ env.VERSION }}"}}'
+
+      - name: Add reaction +1
+        id: add-reaction
+        if: ${{ steps.trigger-build.outcome }} == 'success'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: "+1"
+      - name: Add reaction -1
+        id: add-reaction
+        if: ${{ steps.trigger-build.outcome }} == 'failure'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: "-1"
