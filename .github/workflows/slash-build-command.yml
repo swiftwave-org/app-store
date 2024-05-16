@@ -11,12 +11,12 @@ jobs:
         run: |
           IFS=' ' read -r -a args <<< ${{ github.event.comment.body }}
           if [ ${#args[@]} -ne 3 ]; then
-            print_error "Invalid number of arguments. Usage: $0 \"/build <app_name> <version>\""
+            echo "Invalid number of arguments. Usage: $0 \"/build <app_name> <version>\""
           fi
           app_name="${args[1]}"
           version="${args[2]}"
           if [ -z "$app_name" ] || [ -z "$version" ]; then
-              print_error "App name or version is blank."
+              echo "App name or version is blank."
           fi
           echo "APP_NAME=$app_name" >> $GITHUB_ENV
           echo "VERSION=$version" >> $GITHUB_ENV
