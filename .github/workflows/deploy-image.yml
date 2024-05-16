@@ -22,7 +22,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: swiftwave-org/${{ inputs.app_name }}:${{ inputs.version }}
+  IMAGE_NAME: swiftwave-org/app-store/${{ inputs.app_name }}:${{ inputs.version }}
 
 jobs:
   build:
