@@ -46,7 +46,7 @@ jobs:
 
       - name: Add reaction -1
         id: add_reaction_2
-        if: ${{ steps.trigger_build.outcome == 'failure' || steps.check_args.outcome == 'failure' }}
+        if: failure() && ${{ steps.trigger_build.outcome == 'failure' || steps.check_args.outcome == 'failure' }}
         uses: peter-evans/create-or-update-comment@v4
         with:
           comment-id: ${{ github.event.comment.id }}
