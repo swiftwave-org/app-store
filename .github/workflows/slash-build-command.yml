@@ -37,15 +37,15 @@ jobs:
           -d '{"ref":"main", "inputs":{"app_name":"${{ env.APP_NAME }}", "version": "${{ env.VERSION }}"}}'
 
       - name: Add reaction +1
-        id: add-reaction
+        id: add-reaction-1
         if: ${{ steps.trigger-build.outcome }} == 'success'
         uses: peter-evans/create-or-update-comment@v4
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: "+1"
       - name: Add reaction -1
-        id: add-reaction
-        if: ${{ steps.trigger-build.outcome }} == 'failure'
+        id: add-reaction-2
+        if: ${{ steps.trigger-build.outcome }} == 'failure' || ${{ steps.check-args.outcome }} == 'failure' 
         uses: peter-evans/create-or-update-comment@v4
         with:
           comment-id: ${{ github.event.comment.id }}
