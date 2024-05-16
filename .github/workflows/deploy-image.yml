@@ -61,6 +61,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           file: Dockerfile
+          push: true
           context: "{{defaultContext}}:build/${{ inputs.app_name }}/${{ inputs.version }}"
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           labels: ${{ steps.meta.outputs.labels }}
