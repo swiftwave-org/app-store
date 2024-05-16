@@ -43,6 +43,7 @@ jobs:
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: "+1"
+
       - name: Add reaction -1
         id: add_reaction_2
         if: ${{ steps.trigger_build.outcome == 'failure' || steps.checkargs.outcome == 'failure' }}
