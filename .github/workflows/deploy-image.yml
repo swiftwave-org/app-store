@@ -1,7 +1,7 @@
 name: Docker publish
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       app_name:
         description: 'Application name (must exists in `build` folder)'
