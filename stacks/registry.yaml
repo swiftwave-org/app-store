@@ -1,0 +1,52 @@
+services:
+  "{{STACK_NAME}}":
+    environment:
+      - "AUTH_USERNAME={{AUTH_USERNAME}}"
+      - "AUTH_PASSWORD={{AUTH_PASSWORD}}"
+    image: ghcr.io/swiftwave-org/app-store/registry:2
+    volumes:
+      - "{{REGISTRY_DATA}}:/var/lib/registry"
+    expose:
+      - "5000/http/Registry Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/registry.png"
+  name: "Image Registry"
+  description: "Distribution implementation for storing and distributing of container images and artifacts"
+  readme_description: >
+    ## Image Registry
+
+    This image contains an implementation of the OCI Distribution spec. See github.com/opencontainers/distribution-spec for more details about what it is. You can find the full source code in github.com/distribution/distribution.
+
+
+    ### License
+
+    View [license information](https://github.com/distribution/distribution/blob/master/LICENSE) for the software contained in this image.
+
+
+    As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+
+    Some additional license information which was able to be auto-detected might be found in the [repo-info repository's registry/ directory](https://github.com/docker-library/repo-info/tree/master/repos/registry).
+
+
+    As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
+  iframe_video_embed: ""
+  variables:
+    AUTH_USERNAME:
+      title: "Username"
+      description: "Username for registry authentication"
+      default: ""
+      type: text
+      options:
+    AUTH_PASSWORD:
+      title: "Password"
+      description: "Password for registry authentication"
+      default: ""
+      type: text
+      options:
+    REGISTRY_DATA:
+      title: "Registry Storage Data"
+      description: "The storage location for store data of registry"
+      default: ""
+      type: volume
+      options:
