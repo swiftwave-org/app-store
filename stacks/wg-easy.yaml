@@ -22,7 +22,24 @@ docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wg-easy.png"
   name: "Wireguard Easy"
   description: "The easiest way to run WireGuard VPN + Web-based Admin UI" 
-  readme_description:  "## WireGuard Easy\n\n### Features\n\n* All-in-one: WireGuard + Web UI.\n* Easy installation, simple to use.\n* List, create, edit, delete, enable & disable clients.\n* Show a client's QR code.\n* Download a client's configuration file.\n* Statistics for which clients are connected.\n* Tx/Rx charts for each connected client.\n* Gravatar support.\n* Automatic Light / Dark Mode\n"
+  readme_description: >
+    You have found the easiest way to install & manage WireGuard on any Linux host!
+    
+    ### Features
+
+    * All-in-one: WireGuard + Web UI.
+    * Easy installation, simple to use.
+    * List, create, edit, delete, enable & disable clients.
+    * Show a client's QR code.
+    * Download a client's configuration file.
+    * Statistics for which clients are connected.
+    * Tx/Rx charts for each connected client.
+    * Gravatar support.
+    * Automatic Light / Dark Mode
+
+    ### Links
+    
+    - Github - [github.com/wg-easy/wg-easy](https://github.com/wg-easy/wg-easy)
   iframe_video_embed: ""
   variables:
     WG_LANGUAGE:

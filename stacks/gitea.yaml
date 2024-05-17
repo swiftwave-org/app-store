@@ -10,11 +10,9 @@ docs:
   name: "Gitea"
   description: "Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD"
   readme_description: >
-    ## Gitea
-
     Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD
 
-    ## Purpose
+    ### Purpose
 
     The goal of this project is to make the easiest, fastest, and most
     painless way of setting up a self-hosted Git service.
@@ -31,6 +29,11 @@ docs:
     For accessing free Gitea service (with a limited number of repositories), you can visit [gitea.com](https://gitea.com/user/login).
 
     To quickly deploy your own dedicated Gitea instance on Gitea Cloud, you can start a free trial at [cloud.gitea.com](https://cloud.gitea.com).
+
+    ### Links
+
+    - Official Wesbite - [gitea.com](https://gitea.com/)
+    - Github - [github.com/go-gitea/gitea](https://github.com/go-gitea/gitea)
   iframe_video_embed: ""
   variables:
     GITEA_DATA:
