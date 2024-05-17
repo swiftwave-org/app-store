@@ -1,0 +1,93 @@
+services:
+  "{{STACK_NAME}}":
+    image: bitnami/mariadb:{{MARIADB_VERSION}}
+    environment:
+      - "MARIADB_DATABASE={{MARIADB_DATABASE}}"
+      - "MARIADB_ROOT_USER={{MARIADB_ROOT_USER}}"
+      - "MARIADB_ROOT_PASSWORD={{MARIADB_ROOT_PASSWORD}}"
+      - "MARIADB_USER={{MARIADB_USER}}"
+      - "MARIADB_PASSWORD={{MARIADB_PASSWORD}}"
+    volumes:
+      - "{{MARIADB_STORAGE}}:/bitnami/mariadb"
+    expose:
+      - "3306/tcp/MariaDB Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mariadb.png"
+  name: "MariaDB"
+  description: "MariaDB is an open source, community-developed SQL database server"
+  readme_description: >    
+    ### What is MariaDB?
+
+    MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+
+    ### Note
+
+    During the installation procedure, the Bitnami MariaDB image will be utilised. More information: [hub.docker.com/r/bitnami/mariadb](https://hub.docker.com/r/bitnami/mariadb)
+
+
+    ### Links
+
+    - Official Wesbite - [mariadb.org](https://mariadb.org/)
+
+  iframe_video_embed: ""
+  variables:
+    MARIADB_VERSION:
+      title: "MariaDB Version"
+      description: "Choose the version as per requirement"
+      default: "11.3"
+      type: options
+      options:
+      - title: "latest"
+        value: "latest"
+      - title: "11.3"
+        value: "11.3"
+      - title: "11.2"
+        value: "11.2"
+      - title: "11.1"
+        value: "11.1"
+      - title: "11.0"
+        value: "11.0"
+      - title: "10.11"
+        value: "10.11"
+      - title: "10.6"
+        value: "10.6"
+      - title: "10.5"
+        value: "10.5"
+      - title: "10.4"
+        value: "10.4"
+    MARIADB_DATABASE:
+      title: "MariaDB Database"
+      description: "Initial Database name"
+      default: ""
+      type: text
+      options:
+    MARIADB_ROOT_USER:
+      title: "MariaDB Root Username"
+      description: "Username of MariaDB root user"
+      default: ""
+      type: text
+      options:
+    MARIADB_ROOT_PASSWORD:
+      title: "MariaDB Root Password"
+      description: "Password of MariaDB root user"
+      default: ""
+      type: text
+      options:
+    MARIADB_USER:
+      title: "MariaDB Username"
+      description: "Username of MariaDB user"
+      default: ""
+      type: text
+      options:
+    MARIADB_PASSWORD:
+      title: "MariaDB Password"
+      description: "Password of MariaDB user"
+      default: ""
+      type: text
+      options:
+    MARIADB_STORAGE:
+      title: "MariaDB Data Storage"
+      description: "The data storage for MariaDB"
+      default: ""
+      type: volume
+      options:

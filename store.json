@@ -82,5 +82,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/postgresql.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mariadb.png",
+        "title": "MariaDB",
+        "description": "MariaDB is an open source, community-developed SQL database server",
+        "category": "Database",
+        "stacks": [
+            {
+                "title": "MariaDB",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb.yaml"
+            }
+        ]
     }
 ]
