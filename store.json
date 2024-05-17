@@ -70,5 +70,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png",
+        "title": "PostgreSQL",
+        "description": "PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity",
+        "category": "Database",
+        "stacks": [
+            {
+                "title": "PostgreSQL",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/postgresql.yaml"
+            }
+        ]
     }
 ]
