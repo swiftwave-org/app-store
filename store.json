@@ -46,5 +46,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/filebrowser.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/ghost.png",
+        "title": "Ghost",
+        "description": "Independent technology for modern publishing, memberships, subscriptions and newsletters",
+        "category": "CMS",
+        "stacks": [
+            {
+                "title": "Ghost",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/ghost.yaml"
+            }
+        ]
     }
 ]

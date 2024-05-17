@@ -1,0 +1,48 @@
+services:
+  "{{STACK_NAME}}":
+    image: ghost:5-alpine
+    environment:
+      - "database__client=sqlite3"
+      - "database__connection__filename=/var/lib/ghost/content/data/ghost.db"
+      - "url={{GHOST_BASE_URL}}"
+    volumes:
+      - "{{GHOST_STORAGE}}:/var/lib/ghost/content"
+    expose:
+      - "2368/http/Ghost Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/ghost.png"
+  name: "Ghost"
+  description: "Independent technology for modern publishing, memberships, subscriptions and newsletters"
+  readme_description: >
+    Independent technology for modern publishing, memberships, subscriptions and newsletters
+    
+    ### Note
+
+    After installation, visit `<base_url>/ghost/setup`
+
+
+    ### Ghost Sponsor
+
+    If you're interested in sponsoring Ghost and supporting the project, please check out the profile on [GitHub sponsors](https://github.com/sponsors/TryGhost)
+
+
+    ### Links
+
+    - Official Wesbite - [ghost.org](https://ghost.org/)
+
+    - Github - [github.com/TryGhost/Ghost](https://github.com/TryGhost/Ghost)
+
+  iframe_video_embed: ""
+  variables:
+    GHOST_BASE_URL:
+      title: "Ghost Base URL"
+      description: "Complete base url for ghost service"
+      default: ""
+      type: text
+      options:
+    GHOST_STORAGE:
+      title: "Ghost Storage"
+      description: "The storage of content and database used by Ghost"
+      default: ""
+      type: volume
+      options:
