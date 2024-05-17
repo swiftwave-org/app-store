@@ -58,5 +58,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/ghost.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb.png",
+        "title": "MongoDB",
+        "description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program.",
+        "category": "Database",
+        "stacks": [
+            {
+                "title": "MongoDB",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb.yaml"
+            }
+        ]
     }
 ]

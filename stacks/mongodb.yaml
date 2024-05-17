@@ -1,0 +1,61 @@
+services:
+  "{{STACK_NAME}}":
+    image: bitnami/mongodb:{{MONGODB_VERSION}}
+    environment:
+      - "MONGODB_ROOT_USER={{MONGODB_ROOT_USER}}"
+      - "MONGODB_ROOT_PASSWORD={{MONGODB_ROOT_PASSWORD}}"
+    volumes:
+      - "{{MONGODB_STORAGE}}:/bitnami/mongodb"
+    expose:
+      - "27017/tcp/MongoDB Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb.png"
+  name: "MongoDB"
+  description: "MongoDB is a relational open source NoSQL database"
+  readme_description: >    
+    ### What is MongoDB?
+
+    MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata. MongoDB is developed by MongoDB Inc., and is published under a combination of the Server Side Public License and the Apache License.
+    
+    First developed by the software company 10gen (now MongoDB Inc.) in October 2007 as a component of a planned platform as a service product, the company shifted to an open source development model in 2009, with 10gen offering commercial support and other services. Since then, MongoDB has been adopted as backend software by a number of major websites and services, including MetLife, Barclays, ADP, UPS, Viacom, and the New York Times, among others. MongoDB is the most popular NoSQL database system.
+
+
+    ### Note
+
+    During the installation procedure, the Bitnami MongoDB image will be utilised. More information: [hub.docker.com/r/bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)
+
+
+    ### Links
+
+    - Official Wesbite - [www.mongodb.com](https://www.mongodb.com/)
+
+  iframe_video_embed: ""
+  variables:
+    MONGODB_VERSION:
+      title: "MongoDB Version"
+      description: "Choose the version as per requirement"
+      default: "7.0"
+      type: options
+      options:
+      - title: "7.0"
+        value: "7.0"
+      - title: "6.0"
+        value: "6.0"
+    MONGODB_ROOT_USER:
+      title: "MongoDB Root User"
+      description: "Username for root user"
+      default: ""
+      type: text
+      options:
+    MONGODB_ROOT_PASSWORD:
+      title: "MongoDB Root Password"
+      description: "Password of root user"
+      default: ""
+      type: text
+      options:
+    MONGODB_STORAGE:
+      title: "MongoDB Data Storage"
+      description: "The data storage for MongoDB"
+      default: ""
+      type: volume
+      options:
