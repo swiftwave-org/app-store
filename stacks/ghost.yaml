@@ -1,6 +1,6 @@
 services:
   "{{STACK_NAME}}":
-    image: devmtl/ghostfire:stable
+    image: ghost:5-alpine
     environment:
       - "database__client=sqlite3"
       - "database__connection__filename=/var/lib/ghost/content/data/ghost.db"
@@ -31,10 +31,6 @@ docs:
     - Official Wesbite - [ghost.org](https://ghost.org/)
 
     - Github - [github.com/TryGhost/Ghost](https://github.com/TryGhost/Ghost)
-
-    ### Docker Image
-    
-    Due to some issue in official image, we are using docker image from firepress. Link [https://hub.docker.com/r/devmtl/ghostfire](https://hub.docker.com/r/devmtl/ghostfire)
 
   iframe_video_embed: ""
   variables:
