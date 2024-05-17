@@ -1,0 +1,39 @@
+services:
+  "{{STACK_NAME}}":
+    image: bitnami/redis
+    environment:
+      - "REDIS_PASSWORD={{REDIS_PASSWORD}}"
+    volumes:
+      - "{{REDIS_STORAGE}}:/bitnami/redis/data"
+    expose:
+      - "6379/http/Redis Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/redis.png"
+  name: "Redis"
+  description: "Redis® is an open source, advanced key-value store."
+  readme_description: >
+    Redis® is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+
+    ### Note
+
+    During the installation procedure, the Bitnami MySQL image will be utilised. More information: [hub.docker.com/r/bitnami/mysql](https://hub.docker.com/r/bitnami/mysql)
+
+
+    ### Links
+
+    - Official Wesbite - [redis.com](https://redis.com/)
+
+  iframe_video_embed: ""
+  variables:
+    REDIS_PASSWORD:
+      title: "Redis Password"
+      description: "Password for your instance"
+      default: ""
+      type: text
+      options:
+    REDIS_STORAGE:
+      title: "Redis Storage"
+      description: "Storage to persist redis data"
+      default: ""
+      type: volume
+      options:

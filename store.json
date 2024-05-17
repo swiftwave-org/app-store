@@ -106,5 +106,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/redis.png",
+        "title": "Redis",
+        "description": "is an open source, advanced key-value store",
+        "category": "Database",
+        "stacks": [
+            {
+                "title": "Redis",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/redis.yaml"
+            }
+        ]
     }
 ]
