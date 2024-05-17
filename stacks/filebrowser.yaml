@@ -21,6 +21,7 @@ docs:
     ### Default Credentials
 
     - username - admin
+
     - password - admin
 
     ### Demo
@@ -36,6 +37,7 @@ docs:
     ### Links
 
     - Official Wesbite - [gitea.com](https://filebrowser.org/)
+    
     - Github - [github.com/filebrowser/filebrowser](https://github.com/filebrowser/filebrowser)
 
   iframe_video_embed: ""
