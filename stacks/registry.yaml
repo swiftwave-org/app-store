@@ -14,7 +14,7 @@ docs:
   description: "Distribution implementation for storing and distributing of container images and artifacts"
   readme_description: >
     ## Image Registry
-    
+
     This image contains an implementation of the OCI Distribution spec. See github.com/opencontainers/distribution-spec for more details about what it is. You can find the full source code in github.com/distribution/distribution.
 
 
@@ -33,7 +33,7 @@ docs:
   iframe_video_embed: ""
   variables:
     AUTH_USERNAME:
-      title: "Auth Username"
+      title: "Username"
       description: "Username for registry authentication"
       default: ""
       type: text
