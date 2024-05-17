@@ -36,7 +36,7 @@ docs:
   variables:
     GHOST_BASE_URL:
       title: "Ghost Base URL"
-      description: "Complete base url for ghost service"
+      description: "Base url for ghost service"
       default: ""
       type: text
       options:
