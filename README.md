@@ -9,3 +9,4 @@ _**Feel free to raise issue to add new app in the store**_
 | Name | URL |
 | --- | --- |
 | Wireguard VPN [wg-easy] | [Github](https://github.com/wg-easy/wg-easy) |
+| Docker Image Registry | [Docker Hub](https://hub.docker.com/_/registry) |

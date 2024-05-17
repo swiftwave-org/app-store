@@ -15,6 +15,9 @@ services:
     sysctls:
       - "net.ipv4.ip_forward=1"
       - "net.ipv4.conf.all.src_valid_mark=1"
+    expose:
+      - "51821/http/Wireguard Dashboard"
+      - "51820/udp/Wireguard VPN Channel"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wg-easy.png"
   name: "Wireguard Easy"
@@ -38,7 +41,7 @@ docs:
         value: fr
     WG_HOST:
       title: "Wireguard Host"
-      description: "The public hostname of your VPN server"
+      description: "Choose the same domain configured for ingress rule"
       default: ""
       type: text
       options:
@@ -49,7 +52,7 @@ docs:
       type: text
       options:
     WG_DEVICE:
-      title: "Wireguard Device"
+      title: "Wireguard Device (Don't need to change)"
       description: "Ethernet device the wireguard traffic should be forwarded through."
       default: "eth1"
       type: text
