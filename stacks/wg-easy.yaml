@@ -27,15 +27,15 @@ docs:
     
     ### Features
 
-    * All-in-one: WireGuard + Web UI.\n
-    * Easy installation, simple to use.\n
-    * List, create, edit, delete, enable & disable clients.\n
-    * Show a client's QR code.\n
-    * Download a client's configuration file.\n
-    * Statistics for which clients are connected.\n
-    * Tx/Rx charts for each connected client.\n
-    * Gravatar support.\n
-    * Automatic Light / Dark Mode\n
+    - All-in-one: WireGuard + Web UI.
+    - Easy installation, simple to use.
+    - List, create, edit, delete, enable & disable clients.
+    - Show a client's QR code.
+    - Download a client's configuration file.
+    - Statistics for which clients are connected.
+    - Tx/Rx charts for each connected client.
+    - Gravatar support.
+    - Automatic Light / Dark Mode
 
     ### Links
     
