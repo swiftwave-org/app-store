@@ -1,5 +1,5 @@
 services:
-  "{{STACK_NAME}}_wg":
+  "{{STACK_NAME}}":
     environment:
       - "LANG={{WG_LANGUAGE}}"
       - "WG_HOST={{WG_HOST}}"
