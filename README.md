@@ -15,6 +15,8 @@ _**Feel free to raise issue to add new app in the store**_
 | Ghost | [Official Website](https://ghost.org/) |
 | MongoDB | [Official Website](https://www.mongodb.com/) |
 | PostgreSQL | [Official Website](https://www.postgresql.org/) |
+| MariaDB | [Official Website](https://mariadb.org/) |
+| MySQL | [Official Website](https://www.mysql.com/) |
 
 ### Removal of Application
 If you are the project maintainer of any of these open source projects and wish to have them removed from the Swiftwave App Store, kindly contact us at [support@swiftwave.org](mailto:support@swiftwave.org)
