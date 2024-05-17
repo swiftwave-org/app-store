@@ -35,8 +35,8 @@ docs:
   iframe_video_embed: ""
   variables:
     GHOST_BASE_URL:
-      title: "Ghost Base URL"
-      description: "Base url for ghost service"
+      title: "Base url for ghost blog"
+      description: "i.e. https://myblog.com"
       default: ""
       type: text
       options:
