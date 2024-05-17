@@ -94,5 +94,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql.png",
+        "title": "MySQL",
+        "description": "MySQL is a fast, reliable, scalable, and easy to use open source relational database system",
+        "category": "Database",
+        "stacks": [
+            {
+                "title": "MySQL",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql.yaml"
+            }
+        ]
     }
 ]

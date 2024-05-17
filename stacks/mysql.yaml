@@ -1,0 +1,91 @@
+services:
+  "{{STACK_NAME}}":
+    image: bitnami/mysql:{{MYSQL_VERSION}}
+    environment:
+      - "MYSQL_DATABASE={{MYSQL_DATABASE}}"
+      - "MYSQL_ROOT_USER={{MYSQL_ROOT_USER}}"
+      - "MYSQL_ROOT_PASSWORD={{MYSQL_ROOT_PASSWORD}}"
+      - "MYSQL_USER={{MYSQL_USER}}"
+      - "MYSQL_PASSWORD={{MYSQL_PASSWORD}}"
+    volumes:
+      - "{{MYSQL_STORAGE}}:/bitnami/mysql/data"
+    expose:
+      - "3306/tcp/MySQL Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql.png"
+  name: "MySQL"
+  description: "MySQL is a fast, reliable, scalable, and easy to use open source relational database system"
+  readme_description: >    
+    ### What is MySQL?
+
+    MySQL is a fast, reliable, scalable, and easy to use open source relational database system. Designed to handle mission-critical, heavy-load production applications.
+
+    ### Note
+
+    During the installation procedure, the Bitnami MySQL image will be utilised. More information: [hub.docker.com/r/bitnami/mysql](https://hub.docker.com/r/bitnami/mysql)
+
+
+    ### Links
+
+    - Official Wesbite - [mysql.com](https://www.mysql.com/)
+
+  iframe_video_embed: ""
+  variables:
+    MYSQL_VERSION:
+      title: "MySQL Version"
+      description: "Choose the version as per requirement"
+      default: "8.4"
+      type: options
+      options:
+      - title: "latest"
+        value: "latest"
+      - title: "8.4"
+        value: "8.4"
+      - title: "8.3"
+        value: "8.3"
+      - title: "8.2"
+        value: "8.2"
+      - title: "8.1"
+        value: "8.1"
+      - title: "8.0.37"
+        value: "8.0.37"
+      - title: "8.0"
+        value: "8.0"
+      - title: "5.7"
+        value: "5.7"
+    MYSQL_DATABASE:
+      title: "MySQL Database"
+      description: "Initial Database name"
+      default: ""
+      type: text
+      options:
+    MYSQL_ROOT_USER:
+      title: "MySQL Root Username"
+      description: "Username of MySQL root user"
+      default: ""
+      type: text
+      options:
+    MYSQL_ROOT_PASSWORD:
+      title: "MySQL Root Password"
+      description: "Password of MySQL root user"
+      default: ""
+      type: text
+      options:
+    MYSQL_USER:
+      title: "MySQL Username"
+      description: "Username of MySQL user"
+      default: ""
+      type: text
+      options:
+    MYSQL_PASSWORD:
+      title: "MySQL Password"
+      description: "Password of MySQL user"
+      default: ""
+      type: text
+      options:
+    MYSQL_STORAGE:
+      title: "MySQL Data Storage"
+      description: "The data storage for MySQL"
+      default: ""
+      type: volume
+      options:
