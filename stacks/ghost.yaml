@@ -32,6 +32,10 @@ docs:
 
     - Github - [github.com/TryGhost/Ghost](https://github.com/TryGhost/Ghost)
 
+    ### Docker Image
+    
+    Due to some issue in official image, we are using docker image from firepress. Link [https://hub.docker.com/r/devmtl/ghostfire](https://hub.docker.com/r/devmtl/ghostfire)
+
   iframe_video_embed: ""
   variables:
     GHOST_BASE_URL:
