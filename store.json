@@ -38,7 +38,7 @@
     {
         "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/filebrowser.png",
         "title": "Filebrowser",
-        "description": "📂 Web File Browser",
+        "description": "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface",
         "category": "Storage",
         "stacks": [
             {
