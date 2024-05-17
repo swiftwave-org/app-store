@@ -6,7 +6,7 @@ services:
     volumes:
       - "{{REDIS_STORAGE}}:/bitnami/redis/data"
     expose:
-      - "6379/http/Redis Endpoint"
+      - "6379/tcp/Redis Endpoint"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/redis.png"
   name: "Redis"
