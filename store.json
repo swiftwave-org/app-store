@@ -110,7 +110,7 @@
     {
         "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/redis.png",
         "title": "Redis",
-        "description": "is an open source, advanced key-value store",
+        "description": "Redis is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
         "category": "Database",
         "stacks": [
             {
