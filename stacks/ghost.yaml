@@ -1,6 +1,6 @@
 services:
   "{{STACK_NAME}}":
-    image: ghost:5-alpine
+    image: devmtl/ghostfire:stable
     environment:
       - "database__client=sqlite3"
       - "database__connection__filename=/var/lib/ghost/content/data/ghost.db"
