@@ -32,8 +32,9 @@ docs:
 
     ### Links
 
-    * Official Wesbite - [gitea.com](https://gitea.com/)\n
-    * Github - [github.com/go-gitea/gitea](https://github.com/go-gitea/gitea)
+    - Official Wesbite - [gitea.com](https://gitea.com/)
+    
+    - Github - [github.com/go-gitea/gitea](https://github.com/go-gitea/gitea)
   iframe_video_embed: ""
   variables:
     GITEA_DATA:
