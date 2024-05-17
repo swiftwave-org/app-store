@@ -15,7 +15,7 @@
         "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/registry.png",
         "title": "Image Registry",
         "description": "Distribution implementation for storing and distributing of container images and artifacts",
-        "category": "Registry",
+        "category": "Image Registry",
         "stacks": [
             {
                 "title": "Image Registry",
