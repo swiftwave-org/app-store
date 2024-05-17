@@ -22,5 +22,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/registry.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/gitea.png",
+        "title": "Gitea",
+        "description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD",
+        "category": "Git",
+        "stacks": [
+            {
+                "title": "Gitea",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/gitea.yaml"
+            }
+        ]
     }
 ]
