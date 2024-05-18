@@ -130,5 +130,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/metube.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nodered.png",
+        "title": "NodeRED",
+        "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways",
+        "category": "Visual Programming",
+        "stacks": [
+            {
+                "title": "Metube",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nodered.yaml"
+            }
+        ]
     }
 ]

@@ -1,0 +1,45 @@
+services:
+  "{{STACK_NAME}}":
+    image: ghcr.io/swiftwave-org/app-store/node-red:3.1-debian
+    environment:
+      - "ADMIN_USERNAME={{ADMIN_USERNAME}}"
+      - "ADMIN_PASSWORD={{ADMIN_PASSWORD}}"
+    volumes:
+      - "{{NODERED_STORAGE}}:/data"
+    expose:
+      - "1880/http/NodeRED Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nodered.png"
+  name: "NodeRED"
+  description: "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways"
+  readme_description: >
+    Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+
+    It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
+
+
+    ### Links
+
+    - Official Wesbite - [nodered.org](https://nodered.org/)
+    - Github - [github.com/node-red/node-red](https://github.com/node-red/node-red)
+
+  iframe_video_embed: ""
+  variables:
+    ADMIN_USERNAME:
+      title: "NodeRED Username"
+      description: "Username for authentication"
+      default: ""
+      type: text
+      options:
+    ADMIN_PASSWORD:
+      title: "NodeRED Password"
+      description: "Password for authentication"
+      default: ""
+      type: text
+      options:
+    NODERED_STORAGE:
+      title: "NodeRED Storage"
+      description: "Storage to persist nodered data"
+      default: ""
+      type: volume
+      options:
