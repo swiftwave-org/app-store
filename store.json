@@ -118,5 +118,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/redis.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/metube.png",
+        "title": "Metube",
+        "description": "Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites",
+        "category": "Entertainment",
+        "stacks": [
+            {
+                "title": "Metube",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/metube.yaml"
+            }
+        ]
     }
 ]

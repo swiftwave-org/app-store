@@ -1,0 +1,26 @@
+services:
+  "{{STACK_NAME}}":
+    image: ghcr.io/alexta69/metube
+    volumes:
+      - "{{DOWNLOAD_LOCATION}}:/downloads"
+    expose:
+      - "8081/http/Metube Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/metube.png"
+  name: "Metube"
+  description: "Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites"
+  readme_description: >
+    Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and [dozens of other sites](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md).
+
+    ### Links
+
+    - Official Wesbite - [github.com/alexta69/metube](https://github.com/alexta69/metube)
+
+  iframe_video_embed: ""
+  variables:
+    DOWNLOAD_LOCATION:
+      title: "Metube Download Location"
+      description: "Storage to store downloaded videos"
+      default: ""
+      type: volume
+      options:

@@ -18,6 +18,8 @@ _**Feel free to raise issue to add new app in the store**_
 | MariaDB | [Official Website](https://mariadb.org/) |
 | MySQL | [Official Website](https://www.mysql.com/) |
 | Redis | [Official Website](https://redis.com/) |
+| Metube |  [Github](https://github.com/alexta69/metube) |
+
 
 ### Removal of Application
 If you are the project maintainer of any of these open source projects and wish to have them removed from the Swiftwave App Store, kindly contact us at [support@swiftwave.org](mailto:support@swiftwave.org)
