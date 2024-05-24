@@ -1,0 +1,66 @@
+services:
+  "{{STACK_NAME}}_nextcloud":
+    image: nextcloud:29.0
+    environment:
+      - "POSTGRES_DB=db_{{RANDOM_DB_NAME}}"
+      - "POSTGRES_USER=user_{{RANDOM_DB_USERNAME}}"
+      - "POSTGRES_PASSWORD={{RANDOM_DB_PASSWORD}}"
+      - "POSTGRES_HOST={{STACK_NAME}}_postgres"
+      - "OVERWRITEPROTOCOL={{OVERWRITEPROTOCOL}}"
+    volumes:
+      - "{{NEXTCLOUD_STORAGE}}:/var/www/html"
+    expose:
+      - "80/http/Nextcloud Endpoint"
+  "{{STACK_NAME}}_postgres":
+    image: bitnami/postgresql:16
+    environment:
+      - "POSTGRESQL_DATABASE=db_{{RANDOM_DB_NAME}}"
+      - "POSTGRESQL_USERNAME=user_{{RANDOM_DB_USERNAME}}"
+      - "POSTGRESQL_PASSWORD={{RANDOM_DB_PASSWORD}}"
+      - "POSTGRESQL_TIMEZONE={{POSTGRESQL_TIMEZONE}}"
+    volumes:
+      - "{{POSTGRESQL_STORAGE}}:/bitnami/postgresql"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png"
+  name: "NextCloud"
+  description: "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms"
+  readme_description: >    
+    ### What is NextCloud?
+
+    A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.
+
+    ### Links
+
+    - Official Wesbite - [nextcloud.com](https://nextcloud.com/)
+
+    - GitHub - [github.com/nextcloud](https://github.com/nextcloud)
+
+  iframe_video_embed: ""
+  variables:
+    OVERWRITEPROTOCOL:
+      title: "NextCloud Protocol"
+      description: "Enter http or https based on ingress config"
+      default: "https"
+      type: options
+      options:
+      - title: "https"
+        value: "https"
+      - title: "http"
+        value: "http"
+    POSTGRESQL_TIMEZONE:
+      title: "PostgreSQL Timezone"
+      description: "Provide a valid timezone. Check postgresql.org/docs/7.2/timezones.html"
+      default: "UTC"
+      type: text
+    NEXTCLOUD_STORAGE:
+      title: "NextCloud Data Storage"
+      description: "The data storage for NextCloud"
+      default: ""
+      type: volume
+      options:
+    POSTGRESQL_STORAGE:
+      title: "PostgreSQL Data Storage"
+      description: "The data storage for PostgreSQL"
+      default: ""
+      type: volume
+      options:

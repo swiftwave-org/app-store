@@ -160,6 +160,10 @@
 			{
 				"title": "NextCloud With SQLite",
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-sqlite.yaml"
+			},
+			{
+				"title": "NextCloud With Postgres",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-postgres.yaml"
 			}
 		]
 	}
