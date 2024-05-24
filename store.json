@@ -94,10 +94,6 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb-all.yaml"
 			},
 			{
-				"title": "MariaDB Normal User",
-				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb-normal.yaml"
-			},
-			{
 				"title": "MariaDB Root User",
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb-root.yaml"
 			}
