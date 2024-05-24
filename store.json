@@ -150,5 +150,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nodered.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png",
+		"title": "NextCloud",
+		"description": "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms",
+		"category": "Storage",
+		"stacks": [
+			{
+				"title": "NextCloud With SQLite",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-sqlite.yaml"
+			}
+		]
 	}
 ]

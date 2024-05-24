@@ -1,0 +1,38 @@
+services:
+  "{{STACK_NAME}}":
+    image: nextcloud:29.0
+    environment:
+      - "SQLITE_DATABASE={{SQLITE_DATABASE}}"
+    volumes:
+      - "{{NEXTCLOUD_STORAGE}}:/var/www/html"
+    expose:
+      - "3306/tcp/MySQL Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png"
+  name: "NextCloud"
+  description: "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms"
+  readme_description: >    
+    ### What is NextCloud?
+
+    A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.
+
+    ### Links
+
+    - Official Wesbite - [nextcloud.com](https://nextcloud.com/)
+
+    - GitHub - [github.com/nextcloud](https://github.com/nextcloud)
+
+  iframe_video_embed: ""
+  variables:
+    SQLITE_DATABASE:
+      title: "SQLite Database Name"
+      description: "Provide a name for sqlite database file"
+      default: ""
+      type: text
+      options:
+    NEXTCLOUD_STORAGE:
+      title: "NextCloud Data Storage"
+      description: "The data storage for NextCloud"
+      default: ""
+      type: volume
+      options:
