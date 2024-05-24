@@ -20,6 +20,7 @@ _**Feel free to raise issue to add new app in the store**_
 | Redis                   | [Official Website](https://redis.com/)               |
 | Metube                  | [Github](https://github.com/alexta69/metube)         |
 | NextCloud               | [Official Website](https://nextcloud.com/)           |
+| Vaultwarden             | [Github](https://github.com/dani-garcia/vaultwarden) |
 
 
 ### Removal of Application
