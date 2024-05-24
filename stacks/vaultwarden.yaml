@@ -1,0 +1,52 @@
+services:
+  "{{STACK_NAME}}":
+    image: vaultwarden/server:latest
+    volumes:
+      - "{{VAULTWARDEN_DATA}}:/data"
+    expose:
+      - "80/http/Vaultwarden Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/vaultwarden.png"
+  name: "Vaultwarden"
+  description: "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs"
+  readme_description: >
+    Alternative implementation of the Bitwarden server API written in Rust and compatible with [upstream Bitwarden clients](https://bitwarden.com/download/)*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.
+
+    Note: This project was known as Bitwarden_RS and has been renamed to separate itself from the official Bitwarden server in the hopes of avoiding confusion and trademark/branding issues. Please see [#1642](https://github.com/dani-garcia/vaultwarden/discussions/1642) for more explanation.
+
+    **This project is not associated with the [Bitwarden](https://bitwarden.com/) project nor Bitwarden, Inc.**
+
+    #### ⚠️**IMPORTANT**⚠️: When using this server, please report any bugs or suggestions to us directly (look at the bottom of this page for ways to get in touch), regardless of whatever clients you are using (mobile, desktop, browser...). DO NOT use the official support channels.
+
+    ## Features
+
+    Basically full implementation of Bitwarden API is provided including:
+
+    - Organizations support
+
+    - Attachments and Send
+
+    - Vault API support
+
+    - Serving the static files for Vault interface
+
+    - Website icons API
+
+    - Authenticator and U2F support
+
+    - YubiKey and Duo support
+
+    - Emergency Access
+
+    ### Links
+
+    - Official Wesbite - [github.com/dani-garcia/vaultwarden](https://github.com/dani-garcia/vaultwarden)
+
+  iframe_video_embed: ""
+  variables:
+    VAULTWARDEN_DATA:
+      title: "Vaultwarden Data Location"
+      description: "Storage to store all the data of vaultwarden"
+      default: ""
+      type: volume
+      options:
