@@ -106,8 +106,12 @@
 		"category": "Database",
 		"stacks": [
 			{
-				"title": "MySQL",
-				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql.yaml"
+				"title": "MySQL Root User + Normal User",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-all.yaml"
+			},
+            {
+				"title": "MySQL Root User",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-root.yaml"
 			}
 		]
 	},
