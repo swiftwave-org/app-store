@@ -1,0 +1,73 @@
+services:
+  "{{STACK_NAME}}_bench":
+    image: ghcr.io/swiftwave-org/app-store/frappe-bench:{{BENCH_VERSION}}
+    environment:
+      - "MARIADB_DEFAULT_HOST={{STACK_NAME}}_db"
+    volumes:
+      - "{{BENCH_APPS_STORAGE}}:/home/frappe/frappe-bench/apps"
+      - "{{BENCH_SITES_STORAGE}}:/home/frappe/frappe-bench/sites"
+    expose:
+      - "80/http/Bench Endpoint"
+  "{{STACK_NAME}}_db":
+    image: bitnami/mariadb:10.6
+    environment:
+      - "MARIADB_EXTRA_FLAGS=--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --skip-character-set-client-handshake --skip-innodb-read-only-compressed"
+      - "MARIADB_ROOT_USER={{MARIADB_ROOT_USER}}"
+      - "MARIADB_ROOT_PASSWORD={{MARIADB_ROOT_PASSWORD}}"
+    volumes:
+      - "{{MARIADB_STORAGE}}:/bitnami/mariadb"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/frappe.png"
+  name: "Frappe Bench"
+  description: "Low code web framework for real world applications, in Python and Javascript"
+  readme_description: >
+    ### What is Frappe framework ?
+
+    It's a Full-stack web application framework that uses Python and MariaDB on the server side and a tightly integrated client side library. Built for [ERPNext](https://erpnext.com/)
+
+    ### Links
+
+    - Frappe Cloud - The Official Cloud Platform for Frappe Apps  [frappecloud.com](https://frappecloud.com/)
+
+    - Official Wesbite - [frappeframework.com](https://frappeframework.com/)
+
+    - GitHub - [github.com/frappe/frappe](https://github.com/frappe/frappe)
+
+  iframe_video_embed: ""
+  variables:
+    BENCH_VERSION:
+      title: "Frappe Bench Version"
+      description: "Choose one from the available one"
+      default: "version-15-hotfix"
+      type: options
+      options:
+        - title: version-15-hotfix
+          value: version-15-hotfix
+    MARIADB_ROOT_USER:
+      title: "MariaDB Root User"
+      description: "Username for MariaDB root user"
+      default: "root"
+      type: text
+    MARIADB_ROOT_PASSWORD:
+      title: "MariaDB Root Password"
+      description: "Password for MariaDB root user"
+      default: ""
+      type: text
+    BENCH_APPS_STORAGE:
+      title: "Apps Data Storage"
+      description: "The data storage for Bench Apps"
+      default: ""
+      type: volume
+      options:
+    BENCH_SITES_STORAGE:
+      title: "Sites Data Storage"
+      description: "The data storage for Bench Sites"
+      default: ""
+      type: volume
+      options:
+    MARIADB_STORAGE:
+      title: "MariaDB Data Storage"
+      description: "The data storage for MariaDB"
+      default: ""
+      type: volume
+      options:
