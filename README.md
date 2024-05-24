@@ -6,19 +6,20 @@ _**Feel free to raise issue to add new app in the store**_
 
 **Available Apps -**
 
-| Name | URL |
-| --- | --- |
-| Wireguard VPN [wg-easy] | [Github](https://github.com/wg-easy/wg-easy) |
-| Docker Image Registry | [Docker Hub](https://hub.docker.com/_/registry) |
-| Gitea | [Official Website](https://about.gitea.com/) |
-| Filebrowser | [Github](https://github.com/filebrowser/filebrowser) |
-| Ghost | [Official Website](https://ghost.org/) |
-| MongoDB | [Official Website](https://www.mongodb.com/) |
-| PostgreSQL | [Official Website](https://www.postgresql.org/) |
-| MariaDB | [Official Website](https://mariadb.org/) |
-| MySQL | [Official Website](https://www.mysql.com/) |
-| Redis | [Official Website](https://redis.com/) |
-| Metube |  [Github](https://github.com/alexta69/metube) |
+| Name                    | URL                                                  |
+| ----------------------- | ---------------------------------------------------- |
+| Wireguard VPN [wg-easy] | [Github](https://github.com/wg-easy/wg-easy)         |
+| Docker Image Registry   | [Docker Hub](https://hub.docker.com/_/registry)      |
+| Gitea                   | [Official Website](https://about.gitea.com/)         |
+| Filebrowser             | [Github](https://github.com/filebrowser/filebrowser) |
+| Ghost                   | [Official Website](https://ghost.org/)               |
+| MongoDB                 | [Official Website](https://www.mongodb.com/)         |
+| PostgreSQL              | [Official Website](https://www.postgresql.org/)      |
+| MariaDB                 | [Official Website](https://mariadb.org/)             |
+| MySQL                   | [Official Website](https://www.mysql.com/)           |
+| Redis                   | [Official Website](https://redis.com/)               |
+| Metube                  | [Github](https://github.com/alexta69/metube)         |
+| NextCloud               | [Official Website](https://nextcloud.com/)           |
 
 
 ### Removal of Application
