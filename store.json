@@ -170,5 +170,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-external-postgres.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/vaultwarden.png",
+		"title": "Vaulwarden",
+		"description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+		"category": "Password Manager",
+		"stacks": [
+			{
+				"title": "Vaulwarden",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/vaultwarden.yaml"
+			}
+		]
 	}
 ]
