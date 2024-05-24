@@ -182,17 +182,5 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/vaultwarden.yaml"
 			}
 		]
-	},
-	{
-		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/frappe.png",
-		"title": "Frappe Bench",
-		"description": "Low code web framework for real world applications, in Python and Javascript",
-		"category": "Web Framework",
-		"stacks": [
-			{
-				"title": "Frappe Bench with MariaDB",
-				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb.yaml"
-			}
-		]
 	}
 ]
