@@ -6,7 +6,7 @@ services:
     volumes:
       - "{{NEXTCLOUD_STORAGE}}:/var/www/html"
     expose:
-      - "3306/tcp/MySQL Endpoint"
+      - "80/http/Nextcloud Endpoint"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png"
   name: "NextCloud"
