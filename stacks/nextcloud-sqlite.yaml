@@ -3,6 +3,7 @@ services:
     image: nextcloud:29.0
     environment:
       - "SQLITE_DATABASE={{SQLITE_DATABASE}}"
+      - "OVERWRITEPROTOCOL={{OVERWRITEPROTOCOL}}"
     volumes:
       - "{{NEXTCLOUD_STORAGE}}:/var/www/html"
     expose:
@@ -30,6 +31,16 @@ docs:
       default: ""
       type: text
       options:
+    OVERWRITEPROTOCOL:
+      title: "NextCloud Protocol"
+      description: "Enter http or https based on ingress config"
+      default: "https"
+      type: options
+      options:
+      - title: "https"
+        value: "https"
+      - title: "http"
+        value: "http"
     NEXTCLOUD_STORAGE:
       title: "NextCloud Data Storage"
       description: "The data storage for NextCloud"
