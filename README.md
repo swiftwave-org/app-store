@@ -23,4 +23,4 @@ _**Feel free to raise issue to add new app in the store**_
 
 
 ### Removal of Application
-If you are the project maintainer of any of these open source projects and wish to have them removed from the Swiftwave App Store, kindly contact us at [support@swiftwave.org](mailto:support@swiftwave.org)
+If you are the project owner or maintainer of any of these open source projects and wish to have them removed from the Swiftwave App Store, drop a mail at [support@swiftwave.org](mailto:support@swiftwave.org)
