@@ -33,7 +33,7 @@ docs:
       options:
     OVERWRITEPROTOCOL:
       title: "NextCloud Protocol"
-      description: "Enter http or https based on ingress config"
+      description: "Select http or https based on ingress config"
       default: "https"
       type: options
       options:

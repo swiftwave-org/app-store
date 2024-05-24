@@ -2,29 +2,20 @@ services:
   "{{STACK_NAME}}_nextcloud":
     image: nextcloud:29.0
     environment:
-      - "POSTGRES_DB=db_{{RANDOM_DB_NAME}}"
-      - "POSTGRES_USER=user_{{RANDOM_DB_USERNAME}}"
-      - "POSTGRES_PASSWORD={{RANDOM_DB_PASSWORD}}"
-      - "POSTGRES_HOST={{STACK_NAME}}_postgres"
+      - "POSTGRES_HOST={{POSTGRES_HOST}}"
+      - "POSTGRES_DB={{POSTGRES_DB}}"
+      - "POSTGRES_USER=user_{{POSTGRES_USER}}"
+      - "POSTGRES_PASSWORD={{POSTGRES_PASSWORD}}"
       - "OVERWRITEPROTOCOL={{OVERWRITEPROTOCOL}}"
     volumes:
       - "{{NEXTCLOUD_STORAGE}}:/var/www/html"
     expose:
       - "80/http/Nextcloud Endpoint"
-  "{{STACK_NAME}}_postgres":
-    image: bitnami/postgresql:16
-    environment:
-      - "POSTGRESQL_DATABASE=db_{{RANDOM_DB_NAME}}"
-      - "POSTGRESQL_USERNAME=user_{{RANDOM_DB_USERNAME}}"
-      - "POSTGRESQL_PASSWORD={{RANDOM_DB_PASSWORD}}"
-      - "POSTGRESQL_TIMEZONE={{POSTGRESQL_TIMEZONE}}"
-    volumes:
-      - "{{POSTGRESQL_STORAGE}}:/bitnami/postgresql"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png"
   name: "NextCloud"
   description: "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms"
-  readme_description: >    
+  readme_description: >
     ### What is NextCloud?
 
     A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.
@@ -43,24 +34,33 @@ docs:
       default: "https"
       type: options
       options:
-      - title: "https"
-        value: "https"
-      - title: "http"
-        value: "http"
-    POSTGRESQL_TIMEZONE:
-      title: "PostgreSQL Timezone"
-      description: "Provide a valid timezone. Check postgresql.org/docs/7.2/timezones.html"
-      default: "UTC"
+        - title: "https"
+          value: "https"
+        - title: "http"
+          value: "http"
+    POSTGRES_HOST:
+      title: "PostgreSQL Host"
+      description: "Address of external postgres"
+      default: ""
+      type: text
+    POSTGRES_DB:
+      title: "PostgreSQL Database"
+      description: "Name of the postrges database"
+      default: ""
+      type: text
+    POSTGRES_USER:
+      title: "PostgreSQL User"
+      description: "Username of postgres database"
+      default: ""
+      type: text
+    POSTGRES_PASSWORD:
+      title: "PostgreSQL Password"
+      description: "Password of postgres database"
+      default: ""
       type: text
     NEXTCLOUD_STORAGE:
       title: "NextCloud Data Storage"
       description: "The data storage for NextCloud"
-      default: ""
-      type: volume
-      options:
-    POSTGRESQL_STORAGE:
-      title: "PostgreSQL Data Storage"
-      description: "The data storage for PostgreSQL"
       default: ""
       type: volume
       options:
