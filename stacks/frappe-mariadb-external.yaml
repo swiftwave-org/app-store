@@ -4,8 +4,7 @@ services:
     environment:
       - "MARIADB_DEFAULT_HOST={{MARIADB_DEFAULT_HOST}}"
     volumes:
-      - "{{BENCH_APPS_STORAGE}}:/home/frappe/frappe-bench/apps"
-      - "{{BENCH_SITES_STORAGE}}:/home/frappe/frappe-bench/sites"
+      - "{{BENCH_STORAGE}}:/home/frappe/frappe-bench"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/frappe.png"
   name: "Frappe Bench"
@@ -46,15 +45,9 @@ docs:
       description: "Default MariaDB host for bench"
       default: ""
       type: text
-    BENCH_APPS_STORAGE:
-      title: "Apps Data Storage"
-      description: "The data storage for Bench Apps"
-      default: ""
-      type: volume
-      options:
-    BENCH_SITES_STORAGE:
-      title: "Sites Data Storage"
-      description: "The data storage for Bench Sites"
+    BENCH_STORAGE:
+      title: "Bench Data Storage"
+      description: "The data storage for Apps & Sites"
       default: ""
       type: volume
       options:
