@@ -124,8 +124,7 @@ RUN mkdir -p /var/cache/nginx \
   && chmod g+w /run/nginx.pid \
   && mkdir -p /var/lib/nginx \
   && chown -R 1000:0 /var/lib/nginx \
-  && chmod -R g+w /var/lib/nginx \
-  && ln -s `pwd`/config/nginx.conf /etc/nginx/conf.d/frappe-bench.conf
+  && chmod -R g+w /var/lib/nginx
 
 USER frappe
 
