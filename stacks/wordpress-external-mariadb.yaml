@@ -1,0 +1,59 @@
+services:
+  "{{STACK_NAME}}_wordpress":
+    image: wordpress:6
+    environment:
+      - "WORDPRESS_DB_HOST={{MARIADB_HOST}}"
+      - "WORDPRESS_DB_NAME={{MARIADB_DATABASE}}"
+      - "WORDPRESS_DB_USER={{MARIADB_USER}}"
+      - "WORDPRESS_DB_PASSWORD={{MARIADB_PASSWORD}}"
+    volumes:
+      - "{{WORDPRESS_DATA_STORAGE}}:/var/www/html"
+    expose:
+      - "80/http/Wordpress Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wordpress.png"
+  name: "Wordpress"
+  description: "WordPress is the world's most popular blogging and content management platform"
+  readme_description: >
+    ### What is WordPress ?
+
+    WordPress is the world's most popular blogging and content management platform. Powerful yet simple, everyone from students to global corporations use it to build beautiful, functional websites.
+
+    ### Links
+
+    - Official Wesbite - [wordpress.com](https://wordpress.com/)
+
+    - GitHub - [github.com/WordPress/wordpress-develop](https://github.com/WordPress/wordpress-develop)
+
+  iframe_video_embed: ""
+  variables:
+    MARIADB_HOST:
+      title: "MariaDB Host"
+      description: "The hostname of the MariaDB server"
+      default: ""
+      type: text
+      options:
+    MARIADB_DATABASE:
+      title: "MariaDB Database"
+      description: "Database name of the MariaDB server"
+      default: ""
+      type: text
+      options:
+    MARIADB_USER:
+      title: "MariaDB User"
+      description: "The user name of the MariaDB server"
+      default: ""
+      type: text
+      options:
+    MARIADB_PASSWORD:
+      title: "MariaDB Password"
+      description: "The password of the MariaDB server"
+      default: ""
+      type: text
+      options:
+    WORDPRESS_DATA_STORAGE:
+      title: "Wordpress Data Storage"
+      description: "The persistent data storage for Wordpress"
+      default: ""
+      type: volume
+      options:
