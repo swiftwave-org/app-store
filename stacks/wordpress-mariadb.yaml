@@ -1,0 +1,49 @@
+services:
+  "{{STACK_NAME}}_wordpress":
+    image: wordpress:6
+    environment:
+      - "WORDPRESS_DB_HOST={{STACK_NAME}}_db"
+      - "WORDPRESS_DB_NAME={{RADNOM_MARIADB_DATABASE}}"
+      - "WORDPRESS_DB_USER={{RADNOM_MARIADB_USER}}"
+      - "WORDPRESS_DB_PASSWORD={{RADNOM_MARIADB_PASSWORD}}"
+    volumes:
+      - "{{WORDPRESS_DATA_STORAGE}}:/var/www/html"
+  "{{STACK_NAME}}_db":
+    image: bitnami/mariadb:11.3
+    environment:
+      - "MARIADB_DATABASE={{RADNOM_MARIADB_DATABASE}}"
+      - "MARIADB_ROOT_USER={{RADNOM_MARIADB_ROOT_USER}}"
+      - "MARIADB_ROOT_PASSWORD={{RADNOM_MARIADB_ROOT_PASSWORD}}"
+      - "MARIADB_USER={{RADNOM_MARIADB_USER}}"
+      - "MARIADB_PASSWORD={{RADNOM_MARIADB_PASSWORD}}"
+    volumes:
+      - "{{MARIADB_STORAGE}}:/bitnami/mariadb"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wordpress.png"
+  name: "Wordpress"
+  description: "WordPress is the world's most popular blogging and content management platform"
+  readme_description: >
+    ### What is WordPress ?
+
+    WordPress is the world's most popular blogging and content management platform. Powerful yet simple, everyone from students to global corporations use it to build beautiful, functional websites.
+
+    ### Links
+
+    - Official Wesbite - [wordpress.com](https://wordpress.com/)
+
+    - GitHub - [github.com/WordPress/wordpress-develop](https://github.com/WordPress/wordpress-develop)
+
+  iframe_video_embed: ""
+  variables:
+    WORDPRESS_DATA_STORAGE:
+      title: "Wordpress Data Storage"
+      description: "The persistent data storage for Wordpress"
+      default: ""
+      type: volume
+      options:
+    MARIADB_STORAGE:
+      title: "MariaDB Data Storage"
+      description: "The data storage for MariaDB"
+      default: ""
+      type: volume
+      options:

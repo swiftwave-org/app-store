@@ -198,5 +198,21 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb-external.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wordpress.png",
+		"title": "Wordpress",
+		"description": "WordPress is the world's most popular blogging and content management platform. Powerful yet simple, everyone from students to global corporations use it to build beautiful, functional websites.",
+		"category": "CMS",
+		"stacks": [
+			{
+				"title": "Wordpress with MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wordpress-mariadb.yaml"
+			},
+			{
+				"title": "Wordpress with External MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wordpress-mariadb-external.yaml"
+			}
+		]
 	}
 ]
