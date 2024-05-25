@@ -8,6 +8,8 @@ services:
       - "WORDPRESS_DB_PASSWORD={{RANDOM_MARIADB_PASSWORD}}"
     volumes:
       - "{{WORDPRESS_DATA_STORAGE}}:/var/www/html"
+    expose:
+      - "80/http/Wordpress Endpoint"
   "{{STACK_NAME}}_db":
     image: bitnami/mariadb:11.3
     environment:
