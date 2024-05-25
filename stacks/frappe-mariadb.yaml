@@ -6,8 +6,6 @@ services:
     volumes:
       - "{{BENCH_APPS_STORAGE}}:/home/frappe/frappe-bench/apps"
       - "{{BENCH_SITES_STORAGE}}:/home/frappe/frappe-bench/sites"
-    expose:
-      - "80/http/Bench Endpoint"
   "{{STACK_NAME}}_db":
     image: bitnami/mariadb:10.6
     environment:
@@ -32,6 +30,14 @@ docs:
     - Official Wesbite - [frappeframework.com](https://frappeframework.com/)
 
     - GitHub - [github.com/frappe/frappe](https://github.com/frappe/frappe)
+
+    ### Note
+
+    - **1.** After installation, open the Application Page and go to the 'Actions' page. To access the console, click the 'Open Console' button. The console allows you to run bench commands.
+
+    - **2.** After adding or removing a new site, run 'nginx-reload' in the 'Web Console' to restart the internal nginx server.
+
+    - **3.** Before adding a new site, navigate to 'Application Details Page > Ingress Rules' to create a new ingress rule. During the ingress rule generation process, select the domain name (site name) and point it to 'frappe-bench' on port '80'.
 
   iframe_video_embed: ""
   variables:
