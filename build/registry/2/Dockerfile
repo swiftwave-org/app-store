@@ -1,4 +1,4 @@
-FROM registry:2
+FROM --platform=$TARGETPLATFORM registry:2
 
 RUN apk add apache2-utils
 RUN mkdir -p /auth

@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 AS main
+FROM --platform=$TARGETPLATFORM ubuntu:22.04
 
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
