@@ -16,7 +16,7 @@ ENV FRAPPE_BRANCH version-15-hotfix
 # Install system packages
 RUN apt-get update && apt-get install --yes --no-install-suggests --no-install-recommends \
   # Init
-  build-essential gcc gnupg ca-certificates git sudo mariadb-client libmariadb-dev pv ntp lsb-release wget curl supervisor file nano vim less htop iputils-ping telnet software-properties-common libmagic1 libcups2-dev \
+  build-essential gcc gnupg ca-certificates git mariadb-client libmariadb-dev pv ntp lsb-release wget curl supervisor file nano vim less htop iputils-ping telnet software-properties-common libmagic1 libcups2-dev \
   # weasyprint
   libpango-1.0-0 libharfbuzz0b libpangoft2-1.0-0 libpangocairo-1.0-0 \
   # wkhtmltopdf
@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install --yes --no-install-suggests --no-install-r
   && rm -rf /var/lib/apt/lists/*
 
 # Add frappe non-root user
-RUN useradd -ms /bin/bash frappe && usermod -aG sudo frappe && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN useradd -ms /bin/bash -u 1000 frappe
 
 # Install libssl1.1
 RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb && \
@@ -102,7 +102,32 @@ WORKDIR /home/frappe/frappe-bench
 RUN bench config dns_multitenant on
 
 # Generate default nginx config and create symlink
-RUN bench setup nginx && sudo ln -s `pwd`/config/nginx.conf /etc/nginx/conf.d/frappe-bench.conf
+RUN bench setup nginx
+
+# Change permissions of nginx to run as non-root user
+USER root
+
+RUN mkdir -p /var/cache/nginx \
+  && chown -R 1000:0 /var/cache/nginx \
+  && chmod -R g+w /var/cache/nginx \
+  && mkdir -p /etc/nginx \
+  && chown -R 1000:0 /etc/nginx \
+  && chmod -R g+w /etc/nginx \
+  && mkdir -p /var/log/nginx \
+  && chown -R 1000:0 /var/log/nginx \
+  && chmod -R g+w /var/log/nginx \
+  && mkdir -p /var/run/nginx \
+  && chown -R 1000:0 /var/run/nginx \
+  && chmod -R g+w /var/run/nginx \
+  && touch /run/nginx.pid \
+  && chown 1000:0 /run/nginx.pid \
+  && chmod g+w /run/nginx.pid \
+  && mkdir -p /var/lib/nginx \
+  && chown -R 1000:0 /var/lib/nginx \
+  && chmod -R g+w /var/lib/nginx \
+  && ln -s `pwd`/config/nginx.conf /etc/nginx/conf.d/frappe-bench.conf
+
+USER frappe
 
 EXPOSE 80
 
