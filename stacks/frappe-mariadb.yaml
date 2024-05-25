@@ -31,7 +31,7 @@ docs:
 
     - GitHub - [github.com/frappe/frappe](https://github.com/frappe/frappe)
 
-    ### Note
+    ### Read the points before installation
 
     - **1.** After installation, open the Application Page and go to the 'Actions' page. To access the console, click the 'Open Console' button. The console allows you to run bench commands.
 
