@@ -22,6 +22,7 @@ _**Feel free to raise issue to add new app in the store**_
 | NextCloud               | [Official Website](https://nextcloud.com/)           |
 | Vaultwarden             | [Github](https://github.com/dani-garcia/vaultwarden) |
 | Frappe Bench            | [Official Website](https://frappeframework.com/)     |
+| Wordpress               | [Official Website](https://wordpress.com/)           |
 
 
 ### Removal of Application
