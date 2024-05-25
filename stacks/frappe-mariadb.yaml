@@ -4,8 +4,7 @@ services:
     environment:
       - "MARIADB_DEFAULT_HOST={{STACK_NAME}}_db"
     volumes:
-      - "{{BENCH_APPS_STORAGE}}:/home/frappe/frappe-bench/apps"
-      - "{{BENCH_SITES_STORAGE}}:/home/frappe/frappe-bench/sites"
+      - "{{BENCH_STORAGE}}:/home/frappe/frappe-bench"
   "{{STACK_NAME}}_db":
     image: bitnami/mariadb:10.6
     environment:
@@ -59,15 +58,9 @@ docs:
       description: "Password for MariaDB root user"
       default: ""
       type: text
-    BENCH_APPS_STORAGE:
-      title: "Apps Data Storage"
-      description: "The data storage for Bench Apps"
-      default: ""
-      type: volume
-      options:
-    BENCH_SITES_STORAGE:
-      title: "Sites Data Storage"
-      description: "The data storage for Bench Sites"
+    BENCH_STORAGE:
+      title: "Bench Data Storage"
+      description: "The data storage for Apps & Sites"
       default: ""
       type: volume
       options:
