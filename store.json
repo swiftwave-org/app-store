@@ -192,6 +192,10 @@
 			{
 				"title": "Frappe Bench with MariaDB",
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb.yaml"
+			},
+			{
+				"title": "Frappe Bench with External MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb-external.yaml"
 			}
 		]
 	}
