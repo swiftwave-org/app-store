@@ -214,5 +214,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wordpress-external-mariadb.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/uptime-kuma.png",
+		"title": "Uptime Kuma",
+		"description": "A fancy self-hosted monitoring tool",
+		"category": "Monitoring",
+		"stacks": [
+			{
+				"title": "Uptime Kuma",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/uptime-kuma.yaml"
+			}
+		]
 	}
 ]

@@ -23,6 +23,7 @@ _**Feel free to raise issue to add new app in the store**_
 | Vaultwarden             | [Github](https://github.com/dani-garcia/vaultwarden) |
 | Frappe Bench            | [Official Website](https://frappeframework.com/)     |
 | Wordpress               | [Official Website](https://wordpress.com/)           |
+| Uptime Kuma             | [GitHub](https://github.com/louislam/uptime-kuma)    |
 
 
 ### Removal of Application
