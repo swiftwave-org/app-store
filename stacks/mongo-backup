@@ -1,0 +1,156 @@
+services:
+  "{{STACK_NAME}}_mongodb":
+    image: mongodb
+    volumes:
+      - "{{MONGODB_DATA_STORAGE}}:/data/db"
+    environment:
+      - "MONGO_INITDB_ROOT_USERNAME={{MONGODB_USER}}"
+      - "MONGO_INITDB_ROOT_PASSWORD={{MONGODB_PASS}}"
+
+  "{{STACK_NAME}}_mongodb_backup":
+    image: deenoize/mongodb-backup-s3:latest
+    links:
+      - "{{STACK_NAME}}_mongodb:mongodb"
+    environment:
+      - "AWS_ACCESS_KEY_ID={{AWS_ACCESS_KEY_ID}}"
+      - "AWS_SECRET_ACCESS_KEY={{AWS_SECRET_ACCESS_KEY}}"
+      - "BUCKET={{BUCKET}}"
+      - "BUCKET_REGION={{BUCKET_REGION}}"
+      - "BACKUP_FOLDER={{BACKUP_FOLDER}}"
+      - "MONGODB_HOST={{MONGODB_HOST}}"
+      - "MONGODB_PORT={{MONGODB_PORT}}"
+      - "MONGODB_USER={{MONGODB_USER}}"
+      - "MONGODB_PASS={{MONGODB_PASS}}"
+      - "MONGODB_DB={{MONGODB_DB}}"
+      - "EXTRA_OPTS={{EXTRA_OPTS}}"
+      - "CRON_TIME={{CRON_TIME}}"
+      - "TZ={{TZ}}"
+      - "CRON_TZ={{CRON_TZ}}"
+      - "INIT_BACKUP={{INIT_BACKUP}}"
+      - "INIT_RESTORE={{INIT_RESTORE}}"
+      - "DISABLE_CRON={{DISABLE_CRON}}"
+    volumes:
+      - "{{LOCAL_BACKUP_PATH}}:/backup"
+    restart: always
+
+docs:
+  logo_url: "https://example.com/path_to_mongodb_backup_logo.png"
+  name: "MongoDB Backup S3"
+  description: "Automate MongoDB backups to S3 with periodic execution and AWS v4 auth support."
+  readme_description: >
+    ### What is MongoDB Backup S3?
+
+    MongoDB Backup S3 facilitates the automated backup of MongoDB databases directly to S3 storage, supporting AWS S3 v4 authorization, and customizable scheduling through cron.
+
+    ### Features
+
+    - Automated backups via cron job to S3.
+    - Full support for MongoDB configuration and AWS S3 credentials.
+    - Options for immediate backup on startup and database restoration from the latest backup.
+
+    ### Links
+
+    - MongoDB Backup S3 Documentation - [mongodb-backup-s3-docs](https://mongodb-backup-s3-docs.com)
+  
+  iframe_video_embed: ""
+  variables:
+    AWS_ACCESS_KEY_ID:
+      title: "AWS Access Key ID"
+      description: "AWS access key for S3 bucket"
+      default: ""
+      type: text
+    AWS_SECRET_ACCESS_KEY:
+      title: "AWS Secret Access Key"
+      description: "AWS secret access key for S3 bucket"
+      default: ""
+      type: text
+    BUCKET:
+      title: "S3 Bucket"
+      description: "Name of the S3 bucket where backups are stored"
+      default: ""
+      type: text
+    BUCKET_REGION:
+      title: "S3 Bucket Region"
+      description: "Region of the S3 bucket if not using the default endpoint"
+      default: ""
+      type: text
+    BACKUP_FOLDER:
+      title: "Backup Folder"
+      description: "Folder or path within the S3 bucket where backups are stored"
+      default: ""
+      type: text
+    MONGODB_HOST:
+      title: "MongoDB Host"
+      description: "Host or IP address of the MongoDB server"
+      default: "localhost"
+      type: text
+    MONGODB_PORT:
+      title: "MongoDB Port"
+      description: "Port number of the MongoDB server"
+      default: "27017"
+      type: text
+    MONGODB_USER:
+      title: "MongoDB User"
+      description: "Username for MongoDB"
+      default: "admin"
+      type: text
+    MONGODB_PASS:
+      title: "MongoDB Password"
+      description: "Password for MongoDB"
+      default: ""
+      type: text
+    MONGODB_DB:
+      title: "MongoDB Database"
+      description: "Specific database to dump, empty for all databases"
+      default: ""
+      type: text
+    EXTRA_OPTS:
+      title: "Extra mongodump Options"
+      description: "Additional command-line options for mongodump"
+      default: ""
+      type: text
+    CRON_TIME:
+      title: "Cron Schedule"
+      description: "Cron schedule for running backups"
+      default: "0 3 * * *"
+      type: text
+    TZ:
+      title: "Time Zone"
+      description: "Time zone used by the container"
+      default: "US/Eastern"
+      type: text
+    CRON_TZ:
+      title: "Cron Time Zone"
+      description: "Time zone for the cron scheduler"
+      default: "US/Eastern"
+      type: text
+    INIT_BACKUP:
+      title: "Initialize Backup"
+      description: "Create a backup when the container is launched"
+      default: "false"
+      type: options
+      options:
+        - title: "true"
+          value: "true"
+        - title: "false"
+          value: "false"
+    INIT_RESTORE:
+      title: "Initialize Restore"
+      description: "Restore from the latest backup when the container is launched"
+      default: "false"
+      type: options
+      options:
+        - title: "true"
+          value: "true"
+        - title: "false"
+          value: "false"
+    DISABLE_CRON:
+      title: "Disable Cron"
+      description: "Disable automated backups if only using for seeding or manual backup/restore"
+      default: "false"
+      type: options
+      options:
+        - title: "true"
+          value: "true"
+        - title: "false"
+          value: "false"
