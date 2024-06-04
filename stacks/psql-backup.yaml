@@ -53,19 +53,19 @@ docs:
     SCHEDULE:
       title: "Backup Schedule"
       description: "Cron schedule for automated backups"
-      default: "'@daily'"
+      default: "@daily"
       type: options
       options:
       - title: "Hourly"
-        value: "'@hourly'"
+        value: "@hourly"
       - title: "Daily"
-        value: "'@daily'"
+        value: "@daily"
       - title: "Weekly"
-        value: "'@weekly'"
+        value: "@weekly"
       - title: "Monthly"
-        value: "'@monthly'"
+        value: "@monthly"
       - title: "Yearly"
-        value: "'@yearly'"
+        value: "@yearly"
     S3_ENDPOINT:
       title: "S3 Endpoint"
       description: "Endpoint of the S3 bucket"
