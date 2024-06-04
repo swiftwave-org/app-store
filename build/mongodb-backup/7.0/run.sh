@@ -24,6 +24,7 @@ S3BACKUP=${S3PATH}\${BACKUP_NAME}
 
 aws configure set default.s3.signature_version s3v4
 echo "=> Backup started"
+echo "${HOST_STR}${PORT_STR}${USER_STR}${PASS_STR}${DB_STR} --archive=\${BACKUP_NAME} --gzip"
 if mongodump ${HOST_STR}${PORT_STR}${USER_STR}${PASS_STR}${DB_STR} --archive=\${BACKUP_NAME} --gzip && aws s3 cp \${BACKUP_NAME} \${S3BACKUP} ${REGION_STR} ${ENDPOINT_STR} && rm \${BACKUP_NAME} ;then
     echo "   > Backup succeeded"
 else
