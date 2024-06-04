@@ -20,7 +20,7 @@ cat <<EOF >> /backup.sh
 #!/bin/bash
 TIMESTAMP=\`/bin/date +"%Y%m%dT%H%M%S"\`
 BACKUP_NAME=\${TIMESTAMP}.dump.gz
-S3BACKUP=${S3PATH}\${BACKUP_NAME}
+S3BACKUP=${S3PATH}/\${BACKUP_NAME}
 
 aws configure set default.s3.signature_version s3v4
 echo "=> Backup started"
