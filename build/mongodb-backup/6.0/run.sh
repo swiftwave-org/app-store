@@ -43,4 +43,4 @@ echo "=> Creating a backup on startup"
 echo "${CRON_TIME} . /root/project_env.sh; /backup.sh" > /crontab.conf
 crontab  /crontab.conf
 echo "=> Running cron job"
-cron
+cron -f
