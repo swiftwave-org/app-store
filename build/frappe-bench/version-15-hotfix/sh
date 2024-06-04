@@ -1,0 +1,6 @@
+#!/bin/sh.default
+if [ "$#" -eq 0 ]; then
+    exec /bin/sh.default -l
+else
+    exec /bin/sh.default "$@"
+fi

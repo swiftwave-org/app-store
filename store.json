@@ -226,5 +226,29 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/uptime-kuma.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/psql-backup.png",
+		"title": "PostgreSQL Backup S3",
+		"description": "A handy Docker container to periodically backup PostgreSQL to S3",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "PostgreSQL Backup S3",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/psql-backup.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql-mariadb-backup.png",
+		"title": "MySQL / MariaDB Backup S3",
+		"description": "Efficient and flexible backups for your MySQL / MariaDB databases, directly from your container.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "MySQL / MariaDB Backup S3",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-mariadb-backup.yaml"
+			}
+		]
 	}
 ]
