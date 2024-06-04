@@ -77,13 +77,13 @@ docs:
       default: "us-east-1"
       type: text
     S3_ACCESS_KEY_ID:
-      title: "AWS S3 Access Key ID"
-      description: "Access key ID for AWS S3"
+      title: "S3 Access Key ID"
+      description: "Access key ID for S3"
       default: ""
       type: text
     S3_SECRET_ACCESS_KEY:
-      title: "AWS S3 Secret Access Key"
-      description: "Secret access key for AWS S3"
+      title: "S3 Secret Access Key"
+      description: "Secret access key for S3"
       default: ""
       type: text
     S3_BUCKET:
