@@ -1,4 +1,4 @@
-FROM mongo:7.0
+FROM --platform=$TARGETPLATFORM mongo:7.0
 
 ENV CRON_TIME="0 0 * * *" \
   TZ=UTC \
