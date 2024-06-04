@@ -1,14 +1,6 @@
 services:
-  "{{STACK_NAME}}_postgres":
-    image: postgres
-    environment:
-      - "POSTGRES_USER={{POSTGRES_USER}}"
-      - "POSTGRES_PASSWORD={{POSTGRES_PASSWORD}}"
-
-  "{{STACK_NAME}}_pgbackups3":
-    image: schickling/postgres-backup-s3
-    links:
-      - "{{STACK_NAME}}_postgres:postgres"
+  "{{STACK_NAME}}_pgbackup":
+    image: eeshugerman/postgres-backup-s3:{{VERSION}}
     environment:
       - "SCHEDULE={{SCHEDULE}}"
       - "S3_REGION={{S3_REGION}}"
@@ -16,38 +8,66 @@ services:
       - "S3_SECRET_ACCESS_KEY={{S3_SECRET_ACCESS_KEY}}"
       - "S3_BUCKET={{S3_BUCKET}}"
       - "S3_PREFIX={{S3_PREFIX}}"
+      - "POSTGRES_HOST={{POSTGRES_HOST}}"
       - "POSTGRES_DATABASE={{POSTGRES_DATABASE}}"
       - "POSTGRES_USER={{POSTGRES_USER}}"
       - "POSTGRES_PASSWORD={{POSTGRES_PASSWORD}}"
-      - "POSTGRES_EXTRA_OPTS={{POSTGRES_EXTRA_OPTS}}"
 docs:
-  logo_url: "https://example.com/path_to_postgres_backup_s3_logo.png"
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png"
   name: "Postgres Backup S3"
-  description: "Secure and reliable PostgreSQL backups to S3 with periodic scheduling."
+  description: "A handy Docker container to periodically backup PostgreSQL to S3"
   readme_description: >
     ### What is Postgres Backup S3?
 
-    Postgres Backup S3 allows for secure and automated backups of PostgreSQL databases directly to S3 storage, supporting flexible scheduling options.
+    A handy Docker container to periodically backup PostgreSQL to S3
 
     ### Usage
 
     - Set up periodic backups with customizable schedules.
+
     - Configure PostgreSQL and S3 credentials directly through environment variables.
 
     ### Links
 
-    - More information on scheduling - [postgres-backup-s3-scheduling](https://postgres-backup-s3-docs.com/scheduling)
+    - More information on scheduling - [postgres-backup-s3-scheduling](https://github.com/eeshugerman/postgres-backup-s3)
 
   iframe_video_embed: ""
   variables:
+    VERSION:
+      title: "Postgres Version"
+      description: "Postgres Version"
+      default: "16"
+      type: options
+      options:
+      - title: "16"
+        value: "16"
+      - title: "15"
+        value: "15"
+      - title: "14"
+        value: "14"
+      - title: "13"
+        value: "13"
+      - title: "12"
+        value: "12"
     SCHEDULE:
       title: "Backup Schedule"
       description: "Cron schedule for automated backups"
       default: "@daily"
-      type: text
+      type: option
+      options:
+      - title: "Hourly"
+        value: "@hourly"
+      - title: "Daily"
+        value: "@daily"
+      - title: "Weekly"
+        value: "@weekly"
+      - title: "Monthly"
+        value: "@monthly"
+      - title: "Yearly"
+        value: "@yearly"
     S3_REGION:
-      title: "AWS S3 Region"
-      description: "AWS region where the S3 bucket is located"
+      title: "S3 Region"
+      description: "Region where the S3 bucket is located"
       default: "us-east-1"
       type: text
     S3_ACCESS_KEY_ID:
@@ -70,6 +90,11 @@ docs:
       description: "Prefix path under the S3 bucket where backups will be stored"
       default: "backup"
       type: text
+    POSTGRES_HOST:
+      title: "PostgreSQL Host"
+      description: "Service Name / Host of PostgreSQL"
+      default: ""
+      type: text
     POSTGRES_DATABASE:
       title: "PostgreSQL Database Name"
       description: "Name of the PostgreSQL database to backup"
@@ -84,9 +109,4 @@ docs:
       title: "PostgreSQL Password"
       description: "Password for the specified PostgreSQL user"
       default: ""
-      type: text
-    POSTGRES_EXTRA_OPTS:
-      title: "Additional pg_dump Options"
-      description: "Extra options to pass to pg_dump, such as schema selection or blob handling"
-      default: "--schema=public --blobs"
       type: text
