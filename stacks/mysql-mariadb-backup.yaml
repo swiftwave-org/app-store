@@ -33,9 +33,7 @@ docs:
 
     ### Links
 
-    - GitHub - [github.com/databack/mysql-backup](https://github.com/databack/mysql-backup)
-
-    - Official Documentation - [mysql-backup-docs.com](https://mysql-backup-docs.com)
+    - Docker Hub - [hub.docker.com/r/databack/mysql-backup](https://hub.docker.com/r/databack/mysql-backup)
 
   iframe_video_embed: ""
   variables:
