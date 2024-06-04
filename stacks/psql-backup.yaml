@@ -1,5 +1,5 @@
 services:
-  "{{STACK_NAME}}_pgbackup":
+  "{{STACK_NAME}}":
     image: eeshugerman/postgres-backup-s3:{{VERSION}}
     environment:
       - "SCHEDULE={{SCHEDULE}}"
