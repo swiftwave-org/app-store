@@ -228,7 +228,7 @@
 		]
 	},
 	{
-		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png",
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/psql-backup.png",
 		"title": "PostgreSQL Backup S3",
 		"description": "A handy Docker container to periodically backup PostgreSQL to S3",
 		"category": "Database",

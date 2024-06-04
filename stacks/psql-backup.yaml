@@ -14,7 +14,7 @@ services:
       - "POSTGRES_USER={{POSTGRES_USER}}"
       - "POSTGRES_PASSWORD={{POSTGRES_PASSWORD}}"
 docs:
-  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png"
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/psql-backup.png"
   name: "Postgres Backup S3"
   description: "A handy Docker container to periodically backup PostgreSQL to S3"
   readme_description: >
