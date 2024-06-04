@@ -127,6 +127,21 @@ RUN mkdir -p /var/cache/nginx \
   && chmod -R g+w /var/lib/nginx \
   && ln -s `pwd`/config/nginx.conf /etc/nginx/conf.d/frappe-bench.conf
 
+# Add message in sh and bash
+RUN mv /bin/sh /bin/sh.default
+COPY --chown=frappe:frappe sh /bin/sh
+RUN chmod +x /bin/sh && chmod 777 /bin/sh \
+  && echo "echo \"Welcome to Frappe Bench! Read the instruction below.\"" >> /home/frappe/.profile \
+  && echo "echo \"1. Run bash for better experience.\"" >> /home/frappe/.profile \
+  && echo "echo \"2. While creating a new site, use --mariadb-user-host-login-scope='%' to prevent any database access issues.\"" >> /home/frappe/.profile \
+  && echo "echo \"   Example: bench new-site --mariadb-user-host-login-scope='%' <site_name>\"" >> /home/frappe/.profile \
+  && echo "echo \"3. After you add a new site, run nginx-reload to make the changes effective.\"" >> /home/frappe/.profile \
+  && echo "echo \"Welcome to Frappe Bench! Read the instruction below.\"" >> /home/frappe/.bashrc \
+  && echo "echo \"1. Run bash for better experience.\"" >> /home/frappe/.bashrc \
+  && echo "echo \"2. While creating a new site, use --mariadb-user-host-login-scope='%' to prevent any database access issues.\"" >> /home/frappe/.bashrc \
+  && echo "echo \"   Example: bench new-site --mariadb-user-host-login-scope='%' <site_name>\"" >> /home/frappe/.bashrc \
+  && echo "echo \"3. After you add a new site, run nginx-reload to make the changes effective.\"" >> /home/frappe/.bashrc
+
 USER frappe
 
 EXPOSE 80
