@@ -15,9 +15,9 @@ services:
       - "AWS_SECRET_ACCESS_KEY={{S3_SECRET_ACCESS_KEY}}"
       - "AWS_DEFAULT_REGION={{S3_DEFAULT_REGION}}"
 docs:
-  logo_url: "https://example.com/path_to_mysql_backup_logo.png"
-  name: "MySQL/MariaDB Backup S3"
-  description: "Efficient and flexible backups for your MySQL databases, directly from your container."
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql-mariadb-backup.png"
+  name: "MySQL / MariaDB Backup S3"
+  description: "Efficient and flexible backups for your MySQL / MariaDB databases, directly from your container."
   readme_description: >
     ### What is MySQL Backup?
 
@@ -28,7 +28,8 @@ docs:
     ### Features
 
     - Set up periodic backups with customizable schedules.
-    - Configure PostgreSQL and S3 credentials directly through environment variables.
+
+    - Configure "MySQL / MariaDB and S3 credentials directly through environment variables.
 
     ### Links
 
@@ -88,7 +89,7 @@ docs:
       type: text
     DB_SERVER:
       title: "Database Host"
-      description: "Service Name / Host of mysql/mariadb server"
+      description: "Host of mysql or mariadb server"
       default: ""
       type: text
     DB_PORT:
