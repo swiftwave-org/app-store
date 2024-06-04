@@ -1,0 +1,115 @@
+services:
+  "{{STACK_NAME}}":
+    image: ghcr.io/swiftwave-org/app-store/mongodb-backup:7.0
+    environment:
+      - "AWS_ACCESS_KEY_ID={{S3_ACCESS_KEY_ID}}"
+      - "AWS_SECRET_ACCESS_KEY={{S3_SECRET_ACCESS_KEY}}"
+      - "ENDPOINT_URL={{S3_ENDPOINT}}"
+      - "BUCKET={{S3_BUCKET}}"
+      - "BUCKET_REGION={{S3_DEFAULT_REGION}}"
+      - "BUCKET_PREFIX={{S3_PREFIX}}"
+      - "MONGODB_HOST={{DB_SERVER}}"
+      - "MONGODB_PORT={{DB_PORT}}"
+      - "MONGODB_USER={{DB_USER}}"
+      - "MONGODB_PASS={{DB_PASS}}"
+      - "MONGODB_DB={{DB_NAME}}"
+      - "CRON_TIME={{CRON_TIME}}"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb-backup.png"
+  name: "MongoDB Backup S3"
+  description: "Automate MongoDB backups to S3 with periodic execution"
+  readme_description: >
+    ### What is MongoDB Backup S3?
+
+    MongoDB Backup S3 facilitates the automated backup of MongoDB databases directly to S3 storage, supporting AWS S3 v4 authorization, and customizable scheduling through cron.
+
+    ### Features
+
+    - Automated backups via cron job to S3 + immediate backup on startup
+    - Full support for MongoDB configuration and AWS S3 credentials.
+
+  iframe_video_embed: ""
+  variables:
+    VERSION:
+      title: "Version"
+      description: "Version of the image"
+      default: "7.0"
+      type: options
+      options:
+        - title: "7.0"
+          value: "7.0"
+        - title: "6.0"
+          value: "6.0"
+    CRON_TIME:
+      title: "Backup Schedule"
+      description: "Cron schedule for automated backups"
+      default: "0 0 * * *"
+      type: options
+      options:
+        - title: "Hourly"
+          value: "0 * * * *"
+        - title: "Every 6 Hours"
+          value: "0 */6 * * *"
+        - title: "Daily"
+          value: "0 0 * * *"
+        - title: "Every Sunday"
+          value: "0 0 * * 0"
+        - title: "Monthly"
+          value: "0 0 1 * *"
+        - title: "Yearly"
+          value: "0 0 1 1 *"
+    S3_ENDPOINT:
+      title: "S3 Endpoint"
+      description: "Endpoint of the S3 bucket"
+      default: ""
+      type: text
+    S3_DEFAULT_REGION:
+      title: "S3 Region"
+      description: "Region where the S3 bucket is located"
+      default: "us-east-1"
+      type: text
+    S3_ACCESS_KEY_ID:
+      title: "S3 Access Key ID"
+      description: "Access key ID for S3"
+      default: ""
+      type: text
+    S3_SECRET_ACCESS_KEY:
+      title: "S3 Secret Access Key"
+      description: "Secret access key for S3"
+      default: ""
+      type: text
+    S3_BUCKET:
+      title: "S3 Bucket Name"
+      description: "Name of the S3 bucket where backups will be stored"
+      default: ""
+      type: text
+    S3_PREFIX:
+      title: "S3 Prefix"
+      description: "Prefix path under the S3 bucket where backups will be stored"
+      default: "backup"
+      type: text
+    DB_SERVER:
+      title: "Database Host"
+      description: "Host of mongodb server"
+      default: ""
+      type: text
+    DB_PORT:
+      title: "Database Port"
+      description: "Port number for the database"
+      default: "27017"
+      type: text
+    DB_NAME:
+      title: "Database Name"
+      description: "Name of the database to backup"
+      default: ""
+      type: text
+    DB_USER:
+      title: "Database User"
+      description: "Username for the database"
+      default: ""
+      type: text
+    DB_PASS:
+      title: "Database Password"
+      description: "Password for the database user"
+      default: ""
+      type: text
