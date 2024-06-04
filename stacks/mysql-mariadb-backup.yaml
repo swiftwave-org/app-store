@@ -1,0 +1,114 @@
+services:
+  "{{STACK_NAME}}":
+    image: databack/mysql-backup
+    environment:
+      - "DB_SERVER={{DB_SERVER}}"
+      - "DB_PORT={{DB_PORT}}"
+      - "DB_USER={{DB_USER}}"
+      - "DB_PASS={{DB_PASS}}"
+      - "DB_NAMES={{DB_NAMES}}"
+      - "SINGLE_DATABASE=true"
+      - "DB_DUMP_FREQ={{DB_DUMP_FREQ}}"
+      - "DB_DUMP_TARGET=s3://{{S3_BUCKET}}/{{S3_PREFIX}}"
+      - "AWS_ENDPOINT_URL={{S3_ENDPOINT}}"
+      - "AWS_ACCESS_KEY_ID={{S3_ACCESS_KEY_ID}}"
+      - "AWS_SECRET_ACCESS_KEY={{S3_SECRET_ACCESS_KEY}}"
+      - "AWS_DEFAULT_REGION={{S3_DEFAULT_REGION}}"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql-mariadb-backup.png"
+  name: "MySQL / MariaDB Backup S3"
+  description: "Efficient and flexible backups for your MySQL / MariaDB databases, directly from your container."
+  readme_description: >
+    ### What is MySQL Backup?
+
+    MySQL Backup is a tool for performing database backups efficiently and flexibly. It can handle backups locally or remotely, including support for SMB and S3 targets.
+
+    **NOTE** : In this configuration, we are going to configure S3 as the backup target.
+
+    ### Features
+
+    - Set up periodic backups with customizable schedules.
+
+    - Configure "MySQL / MariaDB and S3 credentials directly through environment variables.
+
+    ### Links
+
+    - GitHub - [github.com/databack/mysql-backup](https://github.com/databack/mysql-backup)
+
+    - Official Documentation - [mysql-backup-docs.com](https://mysql-backup-docs.com)
+
+  iframe_video_embed: ""
+  variables:
+    DB_DUMP_FREQ:
+      title: "Backup Schedule"
+      description: "Cron schedule for automated backups"
+      default: "60"
+      type: options
+      options:
+        - title: "Hourly"
+          value: "60"
+        - title: "Every 6 Hours"
+          value: "360"
+        - title: "Daily"
+          value: "1440"
+        - title: "Weekly"
+          value: "10080"
+        - title: "Monthly"
+          value: "43200"
+        - title: "Yearly"
+          value: "518400"
+    S3_ENDPOINT:
+      title: "S3 Endpoint"
+      description: "Endpoint of the S3 bucket"
+      default: ""
+      type: text
+    S3_DEFAULT_REGION:
+      title: "S3 Region"
+      description: "Region where the S3 bucket is located"
+      default: "us-east-1"
+      type: text
+    S3_ACCESS_KEY_ID:
+      title: "S3 Access Key ID"
+      description: "Access key ID for S3"
+      default: ""
+      type: text
+    S3_SECRET_ACCESS_KEY:
+      title: "S3 Secret Access Key"
+      description: "Secret access key for S3"
+      default: ""
+      type: text
+    S3_BUCKET:
+      title: "S3 Bucket Name"
+      description: "Name of the S3 bucket where backups will be stored"
+      default: ""
+      type: text
+    S3_PREFIX:
+      title: "S3 Prefix"
+      description: "Prefix path under the S3 bucket where backups will be stored"
+      default: "backup"
+      type: text
+    DB_SERVER:
+      title: "Database Host"
+      description: "Host of mysql or mariadb server"
+      default: ""
+      type: text
+    DB_PORT:
+      title: "Database Port"
+      description: "Port number for the database"
+      default: "3306"
+      type: text
+    DB_NAMES:
+      title: "Database Name"
+      description: "Name of the database to backup"
+      default: ""
+      type: text
+    DB_USER:
+      title: "Database User"
+      description: "Username for the database"
+      default: ""
+      type: text
+    DB_PASS:
+      title: "Database Password"
+      description: "Password for the database user"
+      default: ""
+      type: text
