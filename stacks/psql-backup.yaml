@@ -64,8 +64,6 @@ docs:
         value: "@weekly"
       - title: "Monthly"
         value: "@monthly"
-      - title: "Yearly"
-        value: "@yearly"
     S3_ENDPOINT:
       title: "S3 Endpoint"
       description: "Endpoint of the S3 bucket"
