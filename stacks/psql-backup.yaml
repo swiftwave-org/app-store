@@ -1,0 +1,118 @@
+services:
+  "{{STACK_NAME}}":
+    image: eeshugerman/postgres-backup-s3:{{VERSION}}
+    environment:
+      - "SCHEDULE={{SCHEDULE}}"
+      - "S3_ENDPOINT={{S3_ENDPOINT}}"
+      - "S3_REGION={{S3_REGION}}"
+      - "S3_ACCESS_KEY_ID={{S3_ACCESS_KEY_ID}}"
+      - "S3_SECRET_ACCESS_KEY={{S3_SECRET_ACCESS_KEY}}"
+      - "S3_BUCKET={{S3_BUCKET}}"
+      - "S3_PREFIX={{S3_PREFIX}}"
+      - "POSTGRES_HOST={{POSTGRES_HOST}}"
+      - "POSTGRES_DATABASE={{POSTGRES_DATABASE}}"
+      - "POSTGRES_USER={{POSTGRES_USER}}"
+      - "POSTGRES_PASSWORD={{POSTGRES_PASSWORD}}"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/psql-backup.png"
+  name: "Postgres Backup S3"
+  description: "A handy Docker container to periodically backup PostgreSQL to S3"
+  readme_description: >
+    ### What is Postgres Backup S3?
+
+    A handy Docker container to periodically backup PostgreSQL to S3
+
+    ### Usage
+
+    - Set up periodic backups with customizable schedules.
+
+    - Configure PostgreSQL and S3 credentials directly through environment variables.
+
+    ### Links
+
+    - Github - [postgres-backup-s3g](https://github.com/eeshugerman/postgres-backup-s3)
+
+  iframe_video_embed: ""
+  variables:
+    VERSION:
+      title: "Postgres Version"
+      description: "Postgres Version"
+      default: "16"
+      type: options
+      options:
+      - title: "16"
+        value: "16"
+      - title: "15"
+        value: "15"
+      - title: "14"
+        value: "14"
+      - title: "13"
+        value: "13"
+      - title: "12"
+        value: "12"
+    SCHEDULE:
+      title: "Backup Schedule"
+      description: "Cron schedule for automated backups"
+      default: "@daily"
+      type: options
+      options:
+      - title: "Hourly"
+        value: "@hourly"
+      - title: "Daily"
+        value: "@daily"
+      - title: "Weekly"
+        value: "@weekly"
+      - title: "Monthly"
+        value: "@monthly"
+      - title: "Yearly"
+        value: "@yearly"
+    S3_ENDPOINT:
+      title: "S3 Endpoint"
+      description: "Endpoint of the S3 bucket"
+      default: ""
+      type: text
+    S3_REGION:
+      title: "S3 Region"
+      description: "Region where the S3 bucket is located"
+      default: "us-east-1"
+      type: text
+    S3_ACCESS_KEY_ID:
+      title: "S3 Access Key ID"
+      description: "Access key ID for S3"
+      default: ""
+      type: text
+    S3_SECRET_ACCESS_KEY:
+      title: "S3 Secret Access Key"
+      description: "Secret access key for S3"
+      default: ""
+      type: text
+    S3_BUCKET:
+      title: "S3 Bucket Name"
+      description: "Name of the S3 bucket where backups will be stored"
+      default: ""
+      type: text
+    S3_PREFIX:
+      title: "S3 Prefix"
+      description: "Prefix path under the S3 bucket where backups will be stored"
+      default: "backup"
+      type: text
+    POSTGRES_HOST:
+      title: "PostgreSQL Host"
+      description: "Service Name / Host of PostgreSQL"
+      default: ""
+      type: text
+    POSTGRES_DATABASE:
+      title: "PostgreSQL Database Name"
+      description: "Name of the PostgreSQL database to backup"
+      default: ""
+      type: text
+    POSTGRES_USER:
+      title: "PostgreSQL User"
+      description: "Username for accessing the PostgreSQL database"
+      default: ""
+      type: text
+    POSTGRES_PASSWORD:
+      title: "PostgreSQL Password"
+      description: "Password for the specified PostgreSQL user"
+      default: ""
+      type: text
