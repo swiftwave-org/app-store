@@ -250,5 +250,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-mariadb-backup.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb-backup.png",
+		"title": "MongoDB Backup S3",
+		"description": "Automate MongoDB backups to S3 with periodic execution",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "MongoDB Backup S3",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb-backup.yaml"
+			}
+		]
 	}
 ]
