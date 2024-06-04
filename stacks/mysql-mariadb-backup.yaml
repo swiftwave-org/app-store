@@ -16,7 +16,7 @@ services:
       - "AWS_DEFAULT_REGION={{S3_DEFAULT_REGION}}"
 docs:
   logo_url: "https://example.com/path_to_mysql_backup_logo.png"
-  name: "MySQL/MariaDB Backup"
+  name: "MySQL/MariaDB Backup S3"
   description: "Efficient and flexible backups for your MySQL databases, directly from your container."
   readme_description: >
     ### What is MySQL Backup?
