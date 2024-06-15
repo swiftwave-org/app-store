@@ -278,5 +278,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb-external.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/appsmith.png",
+		"title": "Appsmith",
+		"description": "Open-Source Internal Tool Builder",
+		"category": "Web Framework",
+		"stacks": [
+			{
+				"title": "Appsmith",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/appsmith.yaml"
+			}
+		]
 	}
 ]
