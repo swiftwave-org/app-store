@@ -1,0 +1,54 @@
+services:
+  "{{STACK_NAME}}":
+    image: ghcr.io/chevereto/chevereto:latest
+    environment:
+      - "CHEVERETO_DB_HOST={{STACK_NAME}}_db"
+      - "CHEVERETO_DB_USER={{RANDOM_MARIADB_USER}}"
+      - "CHEVERETO_DB_PASS={{RANDOM_MARIADB_PASSWORD}}"
+      - "CHEVERETO_DB_NAME=chevereto"
+      - "CHEVERETO_DB_PORT=3306"
+      - "CHEVERETO_ASSET_STORAGE_URL=local"
+      - "CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/"
+    volumes:
+      - "{{CHEVERETO_STORAGE}}:/var/www/html/images/"
+    expose:
+      - "80/http/Chevereto Endpoint"
+  "{{STACK_NAME}}_db":
+    image: bitnami/mariadb:11.3
+    environment:
+      - "MARIADB_ROOT_PASSWORD={{RANDOM_MARIADB_ROOT_PASSWORD}}"
+      - "MARIADB_USER={{RANDOM_MARIADB_USER}}"
+      - "MARIADB_PASSWORD={{RANDOM_MARIADB_PASSWORD}}"
+      - "MARIADB_DATABASE=chevereto"
+    volumes:
+      - "{{MARIADB_STORAGE}}:/bitnami/mariadb"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/chevereto.png"
+  name: "Chevereto"
+  description: "Chevereto is a self-hosted multi-user, full-featured media hosting solution."
+  readme_description: >
+    ### What is Chevereto?
+
+    Chevereto is a self-hosted multi-user, full-featured media hosting solution. It can be used to create a myriad of applications or to empower existing systems, all around the concept of users hosting and interacting with media content.
+
+
+    Self-hosted Image and Video Hosting solution, your own Flickr/imgur media sharing alternative with your rules.
+
+    ### Links
+
+    - GitHub - [github.com/chevereto](https://github.com/chevereto)
+
+  iframe_video_embed: ""
+  variables:
+    CHEVERETO_STORAGE:
+      title: "Chevereto Storage"
+      description: "The data storage for Chevereto"
+      default: ""
+      type: volume
+      options:
+    MARIADB_STORAGE:
+      title: "MariaDB Data Storage"
+      description: "The data storage for MariaDB"
+      default: ""
+      type: volume
+      options:

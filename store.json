@@ -262,5 +262,21 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb-backup.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/chevereto.png",
+		"title": "Chevereto",
+		"description": "Chevereto is a self-hosted multi-user, full-featured media hosting solution.",
+		"category": "Storage",
+		"stacks": [
+			{
+				"title": "Chevereto with MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb.yaml"
+			},
+			{
+				"title": "Chevereto with External MariaDB/MySQL",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb-external.yaml"
+			}
+		]
 	}
 ]
