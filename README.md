@@ -27,7 +27,9 @@ _**Feel free to raise issue to add new app in the store**_
 | PostgreSQL Backup S3      | [GitHub](https://github.com/eeshugerman/postgres-backup-s3)                         |
 | MySQL / MariaDB Backup S3 | [Docker Hub](https://hub.docker.com/r/databack/mysql-backup)                        |
 | MongoDB Backup S3         | [GitHub](https://github.com/swiftwave-org/app-store/tree/main/build/mongodb-backup) |
-| Chevereto                 | [GitHub](https://github.com/chevereto/chevereto)                                     |
+| Chevereto                 | [GitHub](https://github.com/chevereto/chevereto)                                    |
+| Appsmith                  | [GitHub](https://github.com/appsmithorg/appsmith)                                   |
+| Grafana                   | [GitHub](https://github.com/grafana/grafana)                                        |
 
 
 ### Removal of Application
