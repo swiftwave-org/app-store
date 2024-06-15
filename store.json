@@ -338,5 +338,29 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/cloudflare-tunnel.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pocketbase.png",
+		"title": "PocketBase",
+		"description": "Open Source backend for your next SaaS and Mobile app in 1 file",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "PocketBase",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pocketbase.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/yt-dlp-web-gui.png",
+		"title": "YT DLP Web GUI",
+		"description": "A terrible web ui for yt-dlp. Designed to be self-hosted.",
+		"category": "Entertainment",
+		"stacks": [
+			{
+				"title": "YT DLP Web GUI",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/yt-dlp-web-gui.yaml"
+			}
+		]
 	}
 ]
