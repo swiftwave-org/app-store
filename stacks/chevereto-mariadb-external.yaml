@@ -1,0 +1,69 @@
+services:
+  "{{STACK_NAME}}":
+    image: ghcr.io/chevereto/chevereto:latest
+    environment:
+      - "CHEVERETO_DB_HOST={{MARIADB_HOST}}"
+      - "CHEVERETO_DB_USER={{MARIADB_USER}}"
+      - "CHEVERETO_DB_PASS={{MARIADB_PASSWORD}}"
+      - "CHEVERETO_DB_NAME={{MARIADB_DATABASE}}"
+      - "CHEVERETO_DB_PORT={{MARIADB_PORT}}"
+      - "CHEVERETO_ASSET_STORAGE_URL=local"
+      - "CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/images/_assets/"
+    volumes:
+      - "{{CHEVERETO_STORAGE}}:/var/www/html/images/"
+    expose:
+      - "80/http/Chevereto Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/chevereto.png"
+  name: "Chevereto"
+  description: "Chevereto is a self-hosted multi-user, full-featured media hosting solution."
+  readme_description: >
+    ### What is Chevereto?
+
+    Chevereto is a self-hosted multi-user, full-featured media hosting solution. It can be used to create a myriad of applications or to empower existing systems, all around the concept of users hosting and interacting with media content.
+
+
+    Self-hosted Image and Video Hosting solution, your own Flickr/imgur media sharing alternative with your rules.
+
+    ### Links
+
+    - GitHub - [github.com/chevereto](https://github.com/chevereto)
+
+  iframe_video_embed: ""
+  variables:
+    MARIADB_HOST:
+      title: "MariaDB/MySQL Host"
+      description: "The hostname/ip of the database server"
+      default: ""
+      type: text
+      options:
+    MARIADB_USER:
+      title: "MariaDB/MySQL User"
+      description: "The username for the database server"
+      default: ""
+      type: text
+      options:
+    MARIADB_PASSWORD:
+      title: "MariaDB/MySQL Password"
+      description: "The password for the database server"
+      default: ""
+      type: text
+      options:
+    MARIADB_DATABASE:
+      title: "MariaDB/MySQL Database"
+      description: "The database name"
+      default: ""
+      type: text
+      options:
+    MARIADB_PORT:
+      title: "MariaDB/MySQL Port"
+      description: "The port for the database server"
+      default: "3306"
+      type: text
+      options:
+    CHEVERETO_STORAGE:
+      title: "Chevereto Storage"
+      description: "The data storage for Chevereto"
+      default: ""
+      type: volume
+      options:

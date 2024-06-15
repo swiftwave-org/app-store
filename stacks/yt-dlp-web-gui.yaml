@@ -1,0 +1,59 @@
+services:
+  "{{STACK_NAME}}":
+    image: marcobaobao/yt-dlp-webui
+    command:
+      - "./yt-dlp-webui"
+      - "--out"
+      - "/downloads"
+      - "--conf"
+      - "/config/config.yaml"
+      - "--db"
+      - "/config/local.db"
+      - "--auth"
+      - "--user {{YT_DLP_USERNAME}}"
+      - "--pass {{YT_DLP_PASSWORD}}"
+    volumes:
+      - "{{DOWNLOAD_LOCATION}}:/downloads"
+    expose:
+      - "3033/http/YT DLP Web GUI Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/yt-dlp-web-gui.png"
+  name: "YT DLP Web GUI"
+  description: "A terrible web ui for yt-dlp. Designed to be self-hosted."
+  readme_description: >
+    A not so terrible web ui for yt-dlp.
+
+
+    Created for the only purpose of fetching videos from my server/nas.
+
+
+    Intended to be used with docker and in standalone mode. 😎👍
+
+
+    Developed to be as lightweight as possible (because my server is basically an intel atom sbc).
+    
+
+    ### Links
+
+    - Official Wesbite - [github.com/marcopeocchi/yt-dlp-web-ui](https://github.com/marcopeocchi/yt-dlp-web-ui)
+
+  iframe_video_embed: ""
+  variables:
+    YT_DLP_USERNAME:
+      title: "YT DLP Username"
+      description: "Username for yt-dlp"
+      default: ""
+      type: text
+      options:
+    YT_DLP_PASSWORD:
+      title: "YT DLP Password"
+      description: "Password for yt-dlp"
+      default: ""
+      type: text
+      options:
+    DOWNLOAD_LOCATION:
+      title: "Download Location"
+      description: "Storage to store downloaded videos"
+      default: ""
+      type: volume
+      options:

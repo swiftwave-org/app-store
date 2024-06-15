@@ -1,0 +1,40 @@
+services:
+  "{{STACK_NAME}}":
+    image: dpage/pgadmin4
+    environment:
+      - "PGADMIN_DEFAULT_EMAIL={{PGADMIN_DEFAULT_EMAIL}}"
+      - "PGADMIN_DEFAULT_PASSWORD={{PGADMIN_DEFAULT_PASSWORD}}"
+    volumes:
+      - "{{PGADMIN_STORAGE}}:/var/lib/pgadmin"
+    expose:
+      - "80/http/pgAdmin Dashboard"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pgadmin.png"
+  name: "pgAdmin 4"
+  description: "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL"
+  readme_description: >
+    ### What is pgAdmin ?
+
+    pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.
+
+    ### Links
+
+    - Official Website - [www.pgadmin.org](https://www.pgadmin.org/)
+
+  iframe_video_embed: ""
+  variables:
+    PGADMIN_DEFAULT_EMAIL:
+      title: "Email Address"
+      description: "Email address for login to pgAdmin4"
+      default: ""
+      type: text
+    PGADMIN_DEFAULT_PASSWORD:
+      title: "Password"
+      description: "Password for login to pgAdmin4"
+      default: ""
+      type: text
+    PGADMIN_STORAGE:
+      title: "Storage Location"
+      description: "Storage location for pgAdmin4 data"
+      default: ""
+      type: volume

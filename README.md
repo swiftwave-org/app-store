@@ -27,7 +27,14 @@ _**Feel free to raise issue to add new app in the store**_
 | PostgreSQL Backup S3      | [GitHub](https://github.com/eeshugerman/postgres-backup-s3)                         |
 | MySQL / MariaDB Backup S3 | [Docker Hub](https://hub.docker.com/r/databack/mysql-backup)                        |
 | MongoDB Backup S3         | [GitHub](https://github.com/swiftwave-org/app-store/tree/main/build/mongodb-backup) |
-
+| Chevereto                 | [GitHub](https://github.com/chevereto/chevereto)                                    |
+| Appsmith                  | [GitHub](https://github.com/appsmithorg/appsmith)                                   |
+| Grafana                   | [GitHub](https://github.com/grafana/grafana)                                        |
+| phpMyAdmin                | [Official Website](https://www.phpmyadmin.net/)                                     |
+| pgAdmin4                  | [Official Website](https://www.pgadmin.org/)                                        |
+| Cloudflare Tunnel         | [Official Website](https://www.cloudflare.com/en-in/products/tunnel/)               |
+| Pocketbase                | [GitHub](https://github.com/PocketBase/pocketbase)                                  |
+| yt-dlp-web-gui            | [GitHub](https://github.com/marcopeocchi/yt-dlp-web-ui)                             |
 
 ### Removal of Application
 If you are the project owner or maintainer of any of these open source projects and wish to have them removed from the Swiftwave App Store, drop a mail at [support@swiftwave.org](mailto:support@swiftwave.org)

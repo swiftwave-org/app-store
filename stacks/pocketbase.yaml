@@ -1,0 +1,40 @@
+services:
+  "{{STACK_NAME}}":
+    image: ghcr.io/swiftwave-org/app-store/pocketbase:0.22.13
+    volumes:
+      - "{{DATA_LOCATION}}:/pb"
+    expose:
+      - "8080/http/PocketBase Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pocketbase.png"
+  name: "PocketBase"
+  description: "Open Source backend for your next SaaS and Mobile app in 1 file"
+  readme_description: >
+    Open Source backend for your next SaaS and Mobile app in 1 file
+
+    ### Features
+
+    - **Realtime database** - Embedded performant database with schema builder, data validations, realtime subscriptions and easy to use REST api.
+
+    - **Authentication** - Manage your app users and handle email/password and OAuth2 sign ups (Google, Facebook, GitHub, GitLab) without the hassle.
+
+    - **File storage** - Sanely store files locally or in a S3 storage. Easily attach media to your database records and generate thumbs on the fly.
+
+    - **Extendable** - Use as a standalone app OR as a framework, that you can extend via Go and JavaScript hooks to create your own custom portable backend.
+
+    - __Many More Features__
+
+    ### Links
+
+    - Official Wesbite - [pocketbase.io](https://pocketbase.io/)
+
+    - GitHub - [github.com/pocketbase/pocketbase](https://github.com/pocketbase/pocketbase)
+
+  iframe_video_embed: ""
+  variables:
+    DATA_LOCATION:
+      title: "PocketBase Data Location"
+      description: "Storage to store PocketBase data"
+      default: ""
+      type: volume
+      options:

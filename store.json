@@ -262,5 +262,105 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb-backup.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/chevereto.png",
+		"title": "Chevereto",
+		"description": "Chevereto is a self-hosted multi-user, full-featured media hosting solution.",
+		"category": "Storage",
+		"stacks": [
+			{
+				"title": "Chevereto with MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb.yaml"
+			},
+			{
+				"title": "Chevereto with External MariaDB/MySQL",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb-external.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/appsmith.png",
+		"title": "Appsmith",
+		"description": "Open-Source Internal Tool Builder",
+		"category": "Web Framework",
+		"stacks": [
+			{
+				"title": "Appsmith",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/appsmith.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/grafana.png",
+		"title": "Grafana",
+		"description": "Grafana is the open source analytics & monitoring solution for every database.",
+		"category": "Monitoring",
+		"stacks": [
+			{
+				"title": "Grafana",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/grafana.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/phpmyadmin.png",
+		"title": "phpMyAdmin",
+		"description": "A free software tool written in PHP, intended to handle the administration of MySQL over the Web.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "phpMyAdmin",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/phpmyadmin.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pgadmin.png",
+		"title": "pgAdmin 4",
+		"description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "pgAdmin 4",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pgadmin.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/cloudflare-tunnel.png",
+		"title": "Cloudflare Tunnel",
+		"description": "Connect applications, servers, and other resources to Cloudflare's network via encrypted outbound tunnels.",
+		"category": "Networking",
+		"stacks": [
+			{
+				"title": "Cloudflare Tunnel",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/cloudflare-tunnel.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pocketbase.png",
+		"title": "PocketBase",
+		"description": "Open Source backend for your next SaaS and Mobile app in 1 file",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "PocketBase",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pocketbase.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/yt-dlp-web-gui.png",
+		"title": "YT DLP Web GUI",
+		"description": "A terrible web ui for yt-dlp. Designed to be self-hosted.",
+		"category": "Entertainment",
+		"stacks": [
+			{
+				"title": "YT DLP Web GUI",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/yt-dlp-web-gui.yaml"
+			}
+		]
 	}
 ]
