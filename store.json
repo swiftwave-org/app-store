@@ -326,5 +326,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pgadmin.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/cloudflare-tunnel.png",
+		"title": "Cloudflare Tunnel",
+		"description": "Connect applications, servers, and other resources to Cloudflare's network via encrypted outbound tunnels.",
+		"category": "Networking",
+		"stacks": [
+			{
+				"title": "Cloudflare Tunnel",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/cloudflare-tunnel.yaml"
+			}
+		]
 	}
 ]

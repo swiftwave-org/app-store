@@ -1,0 +1,26 @@
+services:
+  "{{STACK_NAME}}":
+    image: cloudflare/cloudflared
+    command: ["cloudflared", "--no-autoupdate", "tunnel", "run"]
+    environment:
+      - "TUNNEL_TOKEN={{TUNNEL_TOKEN}}"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/cloudflare-tunnel.png"
+  name: "Cloudflare Tunnel"
+  description: "Connect applications, servers, and other resources to Cloudflare's network via encrypted outbound tunnels."
+  readme_description: >
+    ### What is Cloudflare Tunnel ?
+
+    Connect applications, servers, and other resources to Cloudflare's network via encrypted outbound tunnels. No publicly routable IPs or VMs required.
+
+    ### Links
+
+    - Official Website - [www.cloudflare.com/en-in/products/tunnel](https://www.cloudflare.com/en-in/products/tunnel/)
+
+  iframe_video_embed: ""
+  variables:
+    TUNNEL_TOKEN:
+      title: "Tunnel Token"
+      description: "Grab the token from Cloudflare Zero Trust Dashboard"
+      default: ""
+      type: text
