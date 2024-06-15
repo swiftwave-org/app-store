@@ -1,0 +1,30 @@
+services:
+  "{{STACK_NAME}}":
+    image: grafana/grafana-enterprise
+    volumes:
+      - "{{GRAFANA_STORAGE}}:/var/lib/grafana"
+    expose:
+      - "3000/http/Grafana Dashboard"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/grafana.png"
+  name: "Grafana"
+  description: "Grafana is the open source analytics & monitoring solution for every database."
+  readme_description: >
+    ### What is Grafana ?
+
+    Grafana is a multi-platform open source analytics and interactive visualization web application. It can produce charts, graphs, and alerts for the web when connected to supported data sources.
+
+    ### Links
+
+    - Official Wesbite - [grafana.com](https://grafana.com/)
+
+    - Github - [github.com/grafana/grafana](https://github.com/grafana/grafana)
+
+  iframe_video_embed: ""
+  variables:
+    GRAFANA_STORAGE:
+      title: "Grafana Storage"
+      description: "The storage location for Grafana"
+      default: ""
+      type: volume
+      options:

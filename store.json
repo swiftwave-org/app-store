@@ -290,5 +290,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/appsmith.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/grafana.png",
+		"title": "Grafana",
+		"description": "Grafana is the open source analytics & monitoring solution for every database.",
+		"category": "Monitoring",
+		"stacks": [
+			{
+				"title": "Grafana",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/grafana.yaml"
+			}
+		]
 	}
 ]
