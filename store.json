@@ -302,5 +302,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/grafana.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/phpmyadmin.png",
+		"title": "phpMyAdmin",
+		"description": "A free software tool written in PHP, intended to handle the administration of MySQL over the Web.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "phpMyAdmin",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/phpmyadmin.yaml"
+			}
+		]
 	}
 ]

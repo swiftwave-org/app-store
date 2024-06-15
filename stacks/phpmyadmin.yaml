@@ -1,0 +1,34 @@
+services:
+  "{{STACK_NAME}}":
+    image: phpmyadmin
+    environment:
+      - "PMA_HOST={{PMA_HOST}}"
+      - "PMA_PORT={{PMA_PORT}}"
+    expose:
+      - "80/http/PhpMyAdmin Dashboard"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/phpmyadmin.png"
+  name: "phpMyAdmin"
+  description: "A free software tool written in PHP, intended to handle the administration of MySQL over the Web."
+  readme_description: >
+    ### What is phpMyAdmin ?
+
+    phpMyAdmin is a free and open source administration tool for MySQL and MariaDB. As a portable web application written primarily in PHP, it has become one of the most popular MySQL administration tools, especially for web hosting services
+
+
+    ### Links
+
+    - Official Website - [phpmyadmin.net](https://www.phpmyadmin.net/)
+
+  iframe_video_embed: ""
+  variables:
+    PMA_HOST:
+      title: "Database Host"
+      description: "Hostname/IP of the database server"
+      default: ""
+      type: text
+    PMA_PORT:
+      title: "Database Port"
+      description: "Port number of the database server"
+      default: "3306"
+      type: text

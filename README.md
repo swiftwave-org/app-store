@@ -30,6 +30,7 @@ _**Feel free to raise issue to add new app in the store**_
 | Chevereto                 | [GitHub](https://github.com/chevereto/chevereto)                                    |
 | Appsmith                  | [GitHub](https://github.com/appsmithorg/appsmith)                                   |
 | Grafana                   | [GitHub](https://github.com/grafana/grafana)                                        |
+| phpMyAdmin                | [Official Website](https://www.phpmyadmin.net/)                                     |
 
 
 ### Removal of Application
