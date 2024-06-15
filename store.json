@@ -314,5 +314,17 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/phpmyadmin.yaml"
 			}
 		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pgadmin.png",
+		"title": "pgAdmin 4",
+		"description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "pgAdmin 4",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pgadmin.yaml"
+			}
+		]
 	}
 ]
