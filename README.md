@@ -31,7 +31,7 @@ _**Feel free to raise issue to add new app in the store**_
 | Appsmith                  | [GitHub](https://github.com/appsmithorg/appsmith)                                   |
 | Grafana                   | [GitHub](https://github.com/grafana/grafana)                                        |
 | phpMyAdmin                | [Official Website](https://www.phpmyadmin.net/)                                     |
-
+| pgAdmin4                  | [Official Website](https://www.pgadmin.org/)                                        |
 
 ### Removal of Application
 If you are the project owner or maintainer of any of these open source projects and wish to have them removed from the Swiftwave App Store, drop a mail at [support@swiftwave.org](mailto:support@swiftwave.org)
