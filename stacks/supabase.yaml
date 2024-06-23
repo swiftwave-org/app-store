@@ -1,4 +1,4 @@
-minimum_swiftwave_version: "v2.2.6"
+minimum_swiftwave_version: "v2.2.7"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/supabase.png"
   name: "Supabase"
