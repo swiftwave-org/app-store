@@ -300,6 +300,18 @@
         ]
     },
     {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/supabase.png",
+        "title": "Supabase",
+        "description": "Supabase is an open source Firebase alternative.",
+        "category": "Database",
+        "stacks": [
+            {
+                "title": "Supabase",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/supabase.yaml"
+            }
+        ]
+    },
+    {
         "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/uptime-kuma.png",
         "title": "Uptime Kuma",
         "description": "A fancy self-hosted monitoring tool",
