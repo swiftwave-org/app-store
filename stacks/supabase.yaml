@@ -6,7 +6,7 @@ docs:
   readme_description: >
     ## What is Supabase?
 
-    Supabase is an open source Firebase alternative. \
+    Supabase is an open source Firebase alternative.
     Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings.
 
     ## Links 
