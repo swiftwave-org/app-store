@@ -1,378 +1,390 @@
 [
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/appsmith.png",
-        "title": "Appsmith",
-        "description": "Open-Source Internal Tool Builder",
-        "category": "Web Framework",
-        "stacks": [
-            {
-                "title": "Appsmith",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/appsmith.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/chevereto.png",
-        "title": "Chevereto",
-        "description": "Chevereto is a self-hosted multi-user, full-featured media hosting solution.",
-        "category": "Storage",
-        "stacks": [
-            {
-                "title": "Chevereto with MariaDB",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb.yaml"
-            },
-            {
-                "title": "Chevereto with External MariaDB/MySQL",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb-external.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/cloudflare-tunnel.png",
-        "title": "Cloudflare Tunnel",
-        "description": "Connect applications, servers, and other resources to Cloudflare's network via encrypted outbound tunnels.",
-        "category": "Networking",
-        "stacks": [
-            {
-                "title": "Cloudflare Tunnel",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/cloudflare-tunnel.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/filebrowser.png",
-        "title": "Filebrowser",
-        "description": "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface",
-        "category": "Storage",
-        "stacks": [
-            {
-                "title": "Filebrowser",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/filebrowser.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/frappe.png",
-        "title": "Frappe Bench",
-        "description": "Low code web framework for real world applications, in Python and Javascript",
-        "category": "Web Framework",
-        "stacks": [
-            {
-                "title": "Frappe Bench with MariaDB",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb.yaml"
-            },
-            {
-                "title": "Frappe Bench with External MariaDB",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb-external.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/ghost.png",
-        "title": "Ghost",
-        "description": "Independent technology for modern publishing, memberships, subscriptions and newsletters",
-        "category": "CMS",
-        "stacks": [
-            {
-                "title": "Ghost",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/ghost.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/gitea.png",
-        "title": "Gitea",
-        "description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, includi,ng Git hosting, code review, package registry..",
-        "category": "Git",
-        "stacks": [
-            {
-                "title": "Gitea",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/gitea.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/grafana.png",
-        "title": "Grafana",
-        "description": "Grafana is the open source analytics & monitoring solution for every database.",
-        "category": "Monitoring",
-        "stacks": [
-            {
-                "title": "Grafana",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/grafana.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/registry.png",
-        "title": "Image Registry",
-        "description": "Distribution implementation for storing and distributing of container images and artifacts",
-        "category": "Image Registry",
-        "stacks": [
-            {
-                "title": "Image Registry",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/registry.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mariadb.png",
-        "title": "MariaDB",
-        "description": "MariaDB is an open source, community-developed SQL database server",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "MariaDB Root User + Normal User",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb-all.yaml"
-            },
-            {
-                "title": "MariaDB Root User",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb-root.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/metube.png",
-        "title": "Metube",
-        "description": "Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites",
-        "category": "Entertainment",
-        "stacks": [
-            {
-                "title": "Metube",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/metube.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb.png",
-        "title": "MongoDB",
-        "description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program.",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "MongoDB",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb-backup.png",
-        "title": "MongoDB Backup S3",
-        "description": "Automate MongoDB backups to S3 with periodic execution",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "MongoDB Backup S3",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb-backup.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql.png",
-        "title": "MySQL",
-        "description": "MySQL is a fast, reliable, scalable, and easy to use open source relational database system",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "MySQL Root User + Normal User",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-all.yaml"
-            },
-            {
-                "title": "MySQL Root User",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-root.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql-mariadb-backup.png",
-        "title": "MySQL / MariaDB Backup S3",
-        "description": "Efficient and flexible backups for your MySQL / MariaDB databases, directly from your container.",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "MySQL / MariaDB Backup S3",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-mariadb-backup.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png",
-        "title": "NextCloud",
-        "description": "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms",
-        "category": "Storage",
-        "stacks": [
-            {
-                "title": "NextCloud With SQLite",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-sqlite.yaml"
-            },
-            {
-                "title": "NextCloud With Postgres",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-postgres.yaml"
-            },
-            {
-                "title": "NextCloud With External Postgres",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-external-postgres.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nodered.png",
-        "title": "NodeRED",
-        "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways",
-        "category": "Visual Programming",
-        "stacks": [
-            {
-                "title": "Metube",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nodered.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pgadmin.png",
-        "title": "pgAdmin 4",
-        "description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "pgAdmin 4",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pgadmin.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/phpmyadmin.png",
-        "title": "phpMyAdmin",
-        "description": "A free software tool written in PHP, intended to handle the administration of MySQL over the Web.",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "phpMyAdmin",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/phpmyadmin.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pocketbase.png",
-        "title": "PocketBase",
-        "description": "Open Source backend for your next SaaS and Mobile app in 1 file",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "PocketBase",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pocketbase.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png",
-        "title": "PostgreSQL",
-        "description": "PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "PostgreSQL",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/postgresql.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/psql-backup.png",
-        "title": "PostgreSQL Backup S3",
-        "description": "A handy Docker container to periodically backup PostgreSQL to S3",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "PostgreSQL Backup S3",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/psql-backup.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/redis.png",
-        "title": "Redis",
-        "description": "Redis is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "Redis",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/redis.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/supabase.png",
-        "title": "Supabase",
-        "description": "Supabase is an open source Firebase alternative.",
-        "category": "Database",
-        "stacks": [
-            {
-                "title": "Supabase",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/supabase.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/uptime-kuma.png",
-        "title": "Uptime Kuma",
-        "description": "A fancy self-hosted monitoring tool",
-        "category": "Monitoring",
-        "stacks": [
-            {
-                "title": "Uptime Kuma",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/uptime-kuma.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/vaultwarden.png",
-        "title": "Vaulwarden",
-        "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
-        "category": "Password Manager",
-        "stacks": [
-            {
-                "title": "Vaulwarden",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/vaultwarden.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wg-easy.png",
-        "title": "Wireguard Easy",
-        "description": "The easiest way to run WireGuard VPN + Web-based Admin UI",
-        "category": "VPN",
-        "stacks": [
-            {
-                "title": "Wireguard Easy",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wg-easy.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wordpress.png",
-        "title": "Wordpress",
-        "description": "WordPress is the world's most popular blogging and content management platform. Powerful yet simple ...",
-        "category": "CMS",
-        "stacks": [
-            {
-                "title": "Wordpress with MariaDB",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wordpress-mariadb.yaml"
-            },
-            {
-                "title": "Wordpress with External MariaDB",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wordpress-external-mariadb.yaml"
-            }
-        ]
-    },
-    {
-        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/yt-dlp-web-gui.png",
-        "title": "YT DLP Web GUI",
-        "description": "A terrible web ui for yt-dlp. Designed to be self-hosted.",
-        "category": "Entertainment",
-        "stacks": [
-            {
-                "title": "YT DLP Web GUI",
-                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/yt-dlp-web-gui.yaml"
-            }
-        ]
-    }
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/appsmith.png",
+		"title": "Appsmith",
+		"description": "Open-Source Internal Tool Builder",
+		"category": "Web Framework",
+		"stacks": [
+			{
+				"title": "Appsmith",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/appsmith.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/chevereto.png",
+		"title": "Chevereto",
+		"description": "Chevereto is a self-hosted multi-user, full-featured media hosting solution.",
+		"category": "Storage",
+		"stacks": [
+			{
+				"title": "Chevereto with MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb.yaml"
+			},
+			{
+				"title": "Chevereto with External MariaDB/MySQL",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/chevereto-mariadb-external.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/cloudflare-tunnel.png",
+		"title": "Cloudflare Tunnel",
+		"description": "Connect applications, servers, and other resources to Cloudflare's network via encrypted outbound tunnels.",
+		"category": "Networking",
+		"stacks": [
+			{
+				"title": "Cloudflare Tunnel",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/cloudflare-tunnel.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/dozzle.png",
+		"title": "Dozzle",
+		"description": "Real-time logging and monitoring for Docker in the browser",
+		"category": "Docker Tools",
+		"stacks": [
+			{
+				"title": "Dozzle",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/dozzle.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/filebrowser.png",
+		"title": "Filebrowser",
+		"description": "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface",
+		"category": "Storage",
+		"stacks": [
+			{
+				"title": "Filebrowser",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/filebrowser.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/frappe.png",
+		"title": "Frappe Bench",
+		"description": "Low code web framework for real world applications, in Python and Javascript",
+		"category": "Web Framework",
+		"stacks": [
+			{
+				"title": "Frappe Bench with MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb.yaml"
+			},
+			{
+				"title": "Frappe Bench with External MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/frappe-mariadb-external.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/ghost.png",
+		"title": "Ghost",
+		"description": "Independent technology for modern publishing, memberships, subscriptions and newsletters",
+		"category": "CMS",
+		"stacks": [
+			{
+				"title": "Ghost",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/ghost.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/gitea.png",
+		"title": "Gitea",
+		"description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, includi,ng Git hosting, code review, package registry..",
+		"category": "Git",
+		"stacks": [
+			{
+				"title": "Gitea",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/gitea.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/grafana.png",
+		"title": "Grafana",
+		"description": "Grafana is the open source analytics & monitoring solution for every database.",
+		"category": "Monitoring",
+		"stacks": [
+			{
+				"title": "Grafana",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/grafana.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/registry.png",
+		"title": "Image Registry",
+		"description": "Distribution implementation for storing and distributing of container images and artifacts",
+		"category": "Image Registry",
+		"stacks": [
+			{
+				"title": "Image Registry",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/registry.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mariadb.png",
+		"title": "MariaDB",
+		"description": "MariaDB is an open source, community-developed SQL database server",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "MariaDB Root User + Normal User",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb-all.yaml"
+			},
+			{
+				"title": "MariaDB Root User",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mariadb-root.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/metube.png",
+		"title": "Metube",
+		"description": "Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites",
+		"category": "Entertainment",
+		"stacks": [
+			{
+				"title": "Metube",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/metube.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb.png",
+		"title": "MongoDB",
+		"description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "MongoDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb-backup.png",
+		"title": "MongoDB Backup S3",
+		"description": "Automate MongoDB backups to S3 with periodic execution",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "MongoDB Backup S3",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mongodb-backup.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql.png",
+		"title": "MySQL",
+		"description": "MySQL is a fast, reliable, scalable, and easy to use open source relational database system",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "MySQL Root User + Normal User",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-all.yaml"
+			},
+			{
+				"title": "MySQL Root User",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-root.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mysql-mariadb-backup.png",
+		"title": "MySQL / MariaDB Backup S3",
+		"description": "Efficient and flexible backups for your MySQL / MariaDB databases, directly from your container.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "MySQL / MariaDB Backup S3",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/mysql-mariadb-backup.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png",
+		"title": "NextCloud",
+		"description": "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms",
+		"category": "Storage",
+		"stacks": [
+			{
+				"title": "NextCloud With SQLite",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-sqlite.yaml"
+			},
+			{
+				"title": "NextCloud With Postgres",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-postgres.yaml"
+			},
+			{
+				"title": "NextCloud With External Postgres",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nextcloud-external-postgres.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nodered.png",
+		"title": "NodeRED",
+		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways",
+		"category": "Visual Programming",
+		"stacks": [
+			{
+				"title": "Metube",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/nodered.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pgadmin.png",
+		"title": "pgAdmin 4",
+		"description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "pgAdmin 4",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pgadmin.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/phpmyadmin.png",
+		"title": "phpMyAdmin",
+		"description": "A free software tool written in PHP, intended to handle the administration of MySQL over the Web.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "phpMyAdmin",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/phpmyadmin.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pocketbase.png",
+		"title": "PocketBase",
+		"description": "Open Source backend for your next SaaS and Mobile app in 1 file",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "PocketBase",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/pocketbase.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png",
+		"title": "PostgreSQL",
+		"description": "PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "PostgreSQL",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/postgresql.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/psql-backup.png",
+		"title": "PostgreSQL Backup S3",
+		"description": "A handy Docker container to periodically backup PostgreSQL to S3",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "PostgreSQL Backup S3",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/psql-backup.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/redis.png",
+		"title": "Redis",
+		"description": "Redis is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "Redis",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/redis.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/supabase.png",
+		"title": "Supabase",
+		"description": "Supabase is an open source Firebase alternative.",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "Supabase",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/supabase.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/uptime-kuma.png",
+		"title": "Uptime Kuma",
+		"description": "A fancy self-hosted monitoring tool",
+		"category": "Monitoring",
+		"stacks": [
+			{
+				"title": "Uptime Kuma",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/uptime-kuma.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/vaultwarden.png",
+		"title": "Vaulwarden",
+		"description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+		"category": "Password Manager",
+		"stacks": [
+			{
+				"title": "Vaulwarden",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/vaultwarden.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wg-easy.png",
+		"title": "Wireguard Easy",
+		"description": "The easiest way to run WireGuard VPN + Web-based Admin UI",
+		"category": "VPN",
+		"stacks": [
+			{
+				"title": "Wireguard Easy",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wg-easy.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wordpress.png",
+		"title": "Wordpress",
+		"description": "WordPress is the world's most popular blogging and content management platform. Powerful yet simple ...",
+		"category": "CMS",
+		"stacks": [
+			{
+				"title": "Wordpress with MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wordpress-mariadb.yaml"
+			},
+			{
+				"title": "Wordpress with External MariaDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wordpress-external-mariadb.yaml"
+			}
+		]
+	},
+	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/yt-dlp-web-gui.png",
+		"title": "YT DLP Web GUI",
+		"description": "A terrible web ui for yt-dlp. Designed to be self-hosted.",
+		"category": "Entertainment",
+		"stacks": [
+			{
+				"title": "YT DLP Web GUI",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/yt-dlp-web-gui.yaml"
+			}
+		]
+	}
 ]

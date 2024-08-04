@@ -1,0 +1,72 @@
+services:
+  "{{STACK_NAME}}":
+    image: amir20/dozzle
+    expose:
+      - "8080/http/Dozzle Dashboard"
+    environment:
+      - "DOZZLE_REMOTE_HOST=tcp://{{DOCKER_PROXY_HOST}}:2375"
+    preferred_server_hostnames:
+      - "{{DOZZLE_DEPLOYMENT_SERVER}}"
+    docker_proxy_config:
+      enabled: true
+      permissions:
+        ping: read
+        version: read
+        info: read
+        events: read
+        auth: none
+        secrets: none
+        build: none
+        commit: none
+        configs: none
+        containers: read
+        distribution: none
+        exec: none
+        grpc: none
+        images: none
+        networks: none
+        nodes: none
+        plugins: none
+        services: none
+        session: none
+        swarm: none
+        system: none
+        tasks: none
+        volumes: none
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/dozzle.png"
+  name: "Dozzle"
+  description: "Real-time logging and monitoring for Docker in the browser"
+  readme_description: >
+    Dozzle is a small lightweight application with a web based interface to monitor Docker logs. It doesn’t store any log files. It is for live monitoring of your container logs only.
+
+    ### Features
+
+    - Intelligent fuzzy search for container names 🤖
+
+    - Search logs using regex 🔦
+
+    - Small memory footprint 🏎
+
+    - Split screen for viewing multiple logs
+
+    - Download logs easily
+
+    - Live stats with memory and CPU usage
+
+    - Multi-user authentication with support for proxy forward authorization 🚨
+
+    ### Links
+
+    - Official Wesbite - [dozzle.dev](https://dozzle.dev/)
+
+    - Github - [github.com/amir20/dozzle](https://github.com/amir20/dozzle)
+
+  iframe_video_embed: ""
+  variables:
+    DOZZLE_DEPLOYMENT_SERVER:
+      title: "Deploy on Server"
+      description: "Choose swarm manager server"
+      default: ""
+      type: server
+      options:
