@@ -116,6 +116,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/grocy.png",
+		"title": "Grocy",
+		"description": "Grocy is a web-based self-hosted groceries & household management solution for your home.",
+		"category": "Management",
+		"stacks": [
+			{
+				"title": "Grocy",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/grocy.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/registry.png",
 		"title": "Image Registry",
 		"description": "Distribution implementation for storing and distributing of container images and artifacts",

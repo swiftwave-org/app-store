@@ -1,0 +1,46 @@
+services:
+  "{{STACK_NAME}}":
+    image: lscr.io/linuxserver/grocy:latest
+    expose:
+      - "80/http/Grocy Dashboard"
+    volumes:
+      - "{{GROCY_CONFIG_STORAGE}}:/config"
+    environment:
+      - "PUID=1000"
+      - "PGID=1000"
+      - "TZ={{TIMEZONE}}"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/grocy.png"
+  name: "Grocy"
+  description: "ERP beyond your fridge"
+  readme_description: >
+    Grocy is a web-based self-hosted groceries & household management solution for your home.
+
+    **Open Source. Built with passion.**
+
+    ### Default Credential
+
+    - **Username** - admin
+
+    - **Password** - admin
+
+    ### Links
+
+    - Official Wesbite - [grocy.info](https://grocy.info/)
+
+    - Github - [github.com/grocy/grocy](https://github.com/grocy/grocy)
+
+  iframe_video_embed: ""
+  variables:
+    TIMEZONE:
+      title: "Timezone"
+      description: "Provide your timezone"
+      default: "Etc/UTC"
+      type: text
+      options:
+    GROCY_CONFIG_STORAGE:
+      title: "Grocy Storage"
+      description: "The storage location for grocy"
+      default: ""
+      type: volume
+      options:
