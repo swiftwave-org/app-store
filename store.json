@@ -63,6 +63,18 @@
 			}
 		]
 	},
+    {
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/filestash.png",
+		"title": "Filestash",
+		"description": "A Dropbox-like file manager that let you manage your data anywhere it is located",
+		"category": "Storage",
+		"stacks": [
+			{
+				"title": "Filestash",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/filestash.yaml"
+			}
+		]
+	},
 	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/frappe.png",
 		"title": "Frappe Bench",

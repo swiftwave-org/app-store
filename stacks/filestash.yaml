@@ -1,0 +1,90 @@
+services:
+  "{{STACK_NAME}}_filestash":
+    image:  machines/filestash
+    expose:
+      - "8334/http/Filestash Endpoint"
+    volumes:
+      - "{{FILESTASH_STATE_STORAGE}}:/app/data/state"
+    environment:
+      - "ONLYOFFICE_URL=http://{{STACK_NAME}}_onlyoffice"
+  "{{STACK_NAME}}_onlyoffice":
+    image:  onlyoffice/documentserver
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/filestash.png"
+  name: "Filestash"
+  description: "A Dropbox-like file manager that let you manage your data anywhere it is located"
+  readme_description: >
+    A Dropbox-like file manager that let you manage your data anywhere it is located.
+
+    ## **Open Source. Built with passion.**
+
+
+
+    ### Features
+
+    - Manage your files from a browser
+
+    - Authentication middleware to connect to various source of user
+
+    - Flexible Share mechanism
+
+    - Chromecast support for images, music, and videos
+
+    - Video player
+
+    - Video transcoding (mov, mkv, avi, mpeg, and more)
+
+    - Image viewer
+
+    - Image transcoding (raw images from Nikon, Canon, and more)
+
+    - Photo management
+
+    - Audio player
+
+    - Shared links are full fledge network drive
+
+    - Office documents (docx, xlsx and more)
+
+    - Full org mode client ([documentation](https://www.filestash.app/2018/05/31/release-note-v0.1/))
+
+    - User friendly
+
+    - Mobile friendly
+
+    - Customisable
+
+    - Plugins
+
+    - Super fast
+
+    - Upload files and folders
+
+    - Download as zip
+
+    - Multiple cloud providers and protocols, easily extensible
+
+    - Nyan cat loader
+
+    - Quick access: frequently access folders are pin to the homepage
+
+    - Emacs, VIM or Sublime keybindings `;)`
+
+    - Search
+
+    - .. and many more
+
+    ### Links
+
+    - Official Wesbite - [www.filestash.app](https://www.filestash.app/)
+
+    - Github - [github.com/mickael-kerjean/filestash](https://github.com/mickael-kerjean/filestash)
+
+  iframe_video_embed: ""
+  variables:
+    FILESTASH_STATE_STORAGE:
+      title: "Filestash Storage"
+      description: "The storage location for filestash"
+      default: ""
+      type: volume
+      options:
