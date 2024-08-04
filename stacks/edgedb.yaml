@@ -1,0 +1,37 @@
+services:
+  "{{STACK_NAME}}":
+    image: edgedb/edgedb
+    expose:
+      - "5656/tcp/EdgeDB Console"
+    volumes:
+      - "{{EDGEDB_STORAGE}}:/var/lib/edgedb/data"
+    environment:
+      - "EDGEDB_SERVER_PASSWORD={{EDGEDB_SERVER_PASSWORD}}"
+      - "EDGEDB_SERVER_TLS_CERT_MODE=generate_self_signed"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/edgedb.png"
+  name: "EdgeDB"
+  description: "A graph-relational database with declarative schema, built-in migration system, and a next-generation query language"
+  readme_description: >
+    EdgeDB's super-powered query language EdgeQL is designed as a ground-up redesign of SQL. EdgeQL queries produce rich, structured objects, not flat lists of rows. Deeply fetching related objects is painless...bye, bye, JOINs.
+
+    ### Links
+
+    - Official Website - [edgedb.com](https://edgedb.com/)
+
+    - Github - [github.com/edgedb/edgedb](https://github.com/edgedb/edgedb)
+
+  iframe_video_embed: ""
+  variables:
+    EDGEDB_SERVER_PASSWORD:
+      title: "EdgeDB Server Password"
+      description: "Provide your timezone"
+      default: ""
+      type: text
+      options:
+    EDGEDB_STORAGE:
+      title: "EdgeDB Storage"
+      description: "The storage location for EdgeDB"
+      default: ""
+      type: volume
+      options:

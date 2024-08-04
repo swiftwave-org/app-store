@@ -52,6 +52,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/edgedb.png",
+		"title": "EdgeDB",
+		"description": "A graph-relational database with declarative schema, built-in migration system, and a next-generation query language",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "EdgeDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/edgedb.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/filebrowser.png",
 		"title": "Filebrowser",
 		"description": "File Browser is a create-your-own-cloud-kind of software where you can install it on a server, direct it to a path and then access your files through a nice web interface",
@@ -63,7 +75,7 @@
 			}
 		]
 	},
-    {
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/filestash.png",
 		"title": "Filestash",
 		"description": "A Dropbox-like file manager that let you manage your data anywhere it is located",
