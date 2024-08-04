@@ -276,6 +276,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/portainer.png",
+		"title": "Portainer",
+		"description": "Making Docker and Kubernetes management easy",
+		"category": "Docker Tools",
+		"stacks": [
+			{
+				"title": "Portainer",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/portainer.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png",
 		"title": "PostgreSQL",
 		"description": "PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity",
