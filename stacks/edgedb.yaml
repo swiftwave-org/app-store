@@ -8,6 +8,7 @@ services:
     environment:
       - "EDGEDB_SERVER_PASSWORD={{EDGEDB_SERVER_PASSWORD}}"
       - "EDGEDB_SERVER_TLS_CERT_MODE=generate_self_signed"
+      - "EDGEDB_SERVER_ADMIN_UI={{EDGEDB_SERVER_ADMIN_UI}}"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/edgedb.png"
   name: "EdgeDB"
@@ -25,10 +26,20 @@ docs:
   variables:
     EDGEDB_SERVER_PASSWORD:
       title: "EdgeDB Server Password"
-      description: "Provide your timezone"
+      description: "Provide a secure password"
       default: ""
       type: text
       options:
+    EDGEDB_SERVER_ADMIN_UI:
+        title: "Enable EdgeDB UI"
+        description: "If enabled, UI will be available at /ui/_login"
+        default: "disabled"
+        type: options
+        options:
+        - title: Enabled
+          value: enabled
+        - title: Disabled
+          value: disabled
     EDGEDB_STORAGE:
       title: "EdgeDB Storage"
       description: "The storage location for EdgeDB"
