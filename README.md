@@ -12,11 +12,15 @@ _**Feel free to raise issue to add new app in the store**_
 | Chevereto                 | [GitHub](https://github.com/chevereto/chevereto)                                    |
 | Cloudflare Tunnel         | [Official Website](https://www.cloudflare.com/en-in/products/tunnel/)               |
 | Docker Image Registry     | [Docker Hub](https://hub.docker.com/_/registry)                                     |
+| Dozzle                    | [GitHub](https://github.com/amir20/dozzle)                                          |
+| EdgeDB                    | [Official Website](https://edgedb.com/)                                             |
+| Filestash                 | [Official Website](https://www.filestash.app/)                                      |
 | Filebrowser               | [Github](https://github.com/filebrowser/filebrowser)                                |
 | Frappe Bench              | [Official Website](https://frappeframework.com/)                                    |
 | Gitea                     | [Official Website](https://about.gitea.com/)                                        |
 | Ghost                     | [Official Website](https://ghost.org/)                                              |
 | Grafana                   | [GitHub](https://github.com/grafana/grafana)                                        |
+| Grocy                     | [GitHub](https://github.com/grocy/grocy)                                            |
 | MariaDB                   | [Official Website](https://mariadb.org/)                                            |
 | Metube                    | [Github](https://github.com/alexta69/metube)                                        |
 | MongoDB                   | [Official Website](https://www.mongodb.com/)                                        |
@@ -27,10 +31,11 @@ _**Feel free to raise issue to add new app in the store**_
 | phpMyAdmin                | [Official Website](https://www.phpmyadmin.net/)                                     |
 | pgAdmin4                  | [Official Website](https://www.pgadmin.org/)                                        |
 | Pocketbase                | [GitHub](https://github.com/PocketBase/pocketbase)                                  |
+| Portainer                 | [Official Website](https://www.portainer.io/)                                       |
 | PostgreSQL                | [Official Website](https://www.postgresql.org/)                                     |
 | PostgreSQL Backup S3      | [GitHub](https://github.com/eeshugerman/postgres-backup-s3)                         |
 | Redis                     | [Official Website](https://redis.com/)                                              |
-| Supabase                  | [Official Website](https://supabase.com/)                                              |
+| Supabase                  | [Official Website](https://supabase.com/)                                           |
 | Uptime Kuma               | [GitHub](https://github.com/louislam/uptime-kuma)                                   |
 | Vaultwarden               | [Github](https://github.com/dani-garcia/vaultwarden)                                |
 | Wireguard VPN [wg-easy]   | [Github](https://github.com/wg-easy/wg-easy)                                        |
