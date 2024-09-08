@@ -1,0 +1,51 @@
+services:
+  "{{STACK_NAME}}":
+    image: jpillora/cloud-torrent
+    volumes:
+      - "{{DOWNLOAD_LOCATION}}:/downloads"
+    command: "cloud-torrent --auth {{WEB_PANEL_USERNAME}}:{{WEB_PANEL_PASSWORD}}"
+    expose:
+      - "3000/http/Cloud Torrent Endpoint"
+
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/cloud-torrent.png"
+  name: "Cloud Torrent"
+  description: "A self-hosted remote torrent client"
+  readme_description: >
+    Cloud torrent is a a self-hosted remote torrent client, written in Go (golang). You start torrents remotely, which are downloaded as sets of files on the local disk of the server, which are then retrievable or streamable via HTTP.
+
+    **Features**
+
+    - Single binary
+
+    - Cross platform
+
+    - Embedded torrent search
+
+    - Real-time updates
+
+    - Mobile-friendly
+
+    ### Links
+
+    - Official Wesbite - [https://github.com/jpillora/cloud-torrent](hhttps://github.com/jpillora/cloud-torrent)
+
+  iframe_video_embed: ""
+  variables:
+    WEB_PANEL_USERNAME:
+      title: "Web Panel Username"
+      description: "Username for web panel"
+      default: ""
+      type: text
+      options:
+    WEB_PANEL_PASSWORD:
+      title: "Web Panel Password"
+      description: "Password for web panel"
+      default: ""
+      type: text
+    DOWNLOAD_LOCATION:
+      title: "Download Location"
+      description: "Storage to store downloaded content"
+      default: ""
+      type: volume
+      options:
