@@ -27,8 +27,8 @@ _**Feel free to raise issue to add new app in the store**_
 | MongoDB Backup S3         | [GitHub](https://github.com/swiftwave-org/app-store/tree/main/build/mongodb-backup) |
 | MySQL                     | [Official Website](https://www.mysql.com/)                                          |
 | MySQL / MariaDB Backup S3 | [Docker Hub](https://hub.docker.com/r/databack/mysql-backup)                        |
-| NextCloud                 | [Official Website](https://penpot.app/)                                             |
-| Penpot                    | [Official Website](https://nextcloud.com/)                                          |
+| NextCloud                 | [Official Website](https://nextcloud.com/)                                          |
+| Penpot                    | [Official Website](https://penpot.app/)                                             |
 | phpMyAdmin                | [Official Website](https://www.phpmyadmin.net/)                                     |
 | pgAdmin4                  | [Official Website](https://www.pgadmin.org/)                                        |
 | Pocketbase                | [GitHub](https://github.com/PocketBase/pocketbase)                                  |
