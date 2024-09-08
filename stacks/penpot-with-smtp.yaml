@@ -9,6 +9,8 @@ services:
       - "{{ASSETS_STORAGE}}:/opt/data/assets"
     expose:
       - "80/http/Penpot Endpoint"
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
 
   "{{STACK_NAME}}_backend":
     image: penpotapp/backend:latest
@@ -34,14 +36,17 @@ services:
       - "PENPOT_SMTP_SSL={{SMTP_SSL_MODE}}"
     volumes:
       - "{{ASSETS_STORAGE}}:/opt/data/assets"
-
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
 
   "{{STACK_NAME}}_exporter":
     image: penpotapp/exporter:latest
     environment:
       - "PENPOT_PUBLIC_URI=http://{{STACK_NAME}}_frontend"
       - "PENPOT_REDIS_URI=redis://{{STACK_NAME}}_redis/0"
-  
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
+
   "{{STACK_NAME}}_db":
     image: postgres:15
     environment:
@@ -51,9 +56,13 @@ services:
       - "POSTGRES_PASSWORD={{RANDOM_POSTGRES_PASSWORD}}"
     volumes:
       - "{{POSTGRES_STORAGE}}:/var/lib/postgresql/data"
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
 
   "{{STACK_NAME}}_redis":
     image: redis:7
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/penpot.png"
   name: "Penpot"
@@ -71,6 +80,12 @@ docs:
 
   iframe_video_embed: ""
   variables:
+    DEPLOYMENT_SERVER:
+      title: "Deployment Server"
+      description: "The server to deploy penpot"
+      default: ""
+      type: server
+      options:
     PUBLIC_URL:
       title: "Public URL for Penpot"
       description: "i.e. https://example.com"
