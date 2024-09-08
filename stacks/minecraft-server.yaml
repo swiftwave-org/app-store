@@ -5,6 +5,8 @@ services:
       - "EULA=TRUE"
     volumes:
       - "{{DATA_LOCATION}}:/data"
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
     expose:
       - "25565/tcp/Minecraft Server"
 docs:
@@ -20,6 +22,12 @@ docs:
 
   iframe_video_embed: ""
   variables:
+    DEPLOYMENT_SERVER:
+      title: "Deployment Server"
+      description: "The server to deploy minecraft"
+      default: ""
+      type: server
+      options:
     DATA_LOCATION:
       title: "Minecraft Data Location"
       description: "Storage to store minecraft server data"
