@@ -39,7 +39,7 @@
 			}
 		]
 	},
-    {
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/cloud-torrent.png",
 		"title": "Cloud Torrent",
 		"description": "A self-hosted remote torrent client, written in Go (golang).",
