@@ -53,9 +53,9 @@
 	},
 	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/databag.png",
-		"title": "Communication",
+		"title": "Databag",
 		"description": "Fast & lightweight self-hosted messenger",
-		"category": "Entertainment",
+		"category": "Communication",
 		"stacks": [
 			{
 				"title": "Cloud Torrent",
