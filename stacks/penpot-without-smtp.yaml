@@ -63,6 +63,12 @@ docs:
 
   iframe_video_embed: ""
   variables:
+    PUBLIC_URL:
+      title: "Public URL for Penpot"
+      description: "i.e. https://example.com"
+      default: ""
+      type: text
+      options:
     ALLOW_USER_REGISTRATION:
       title: "Allow user registration"
       description: "If enabled, users can register for Penpot"
@@ -73,12 +79,6 @@ docs:
           value: "enable-registration"
         - title: Disable
           value: "disable-registration"
-    PUBLIC_URL:
-      title: "Public URL for Penpot"
-      description: "i.e. https://example.com"
-      default: ""
-      type: text
-      options:
     ASSETS_STORAGE:
       title: "Assets Storage"
       description: "The storage location for Penpot assets"
