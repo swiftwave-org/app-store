@@ -12,6 +12,7 @@ _**Feel free to raise issue to add new app in the store**_
 | Chevereto                 | [GitHub](https://github.com/chevereto/chevereto)                                    |
 | Cloudflare Tunnel         | [Official Website](https://www.cloudflare.com/en-in/products/tunnel/)               |
 | Cloud Torrent             | [GitHub](https://github.com/jpillora/cloud-torrent)                                 |
+| Databag                   | [Github](https://github.com/balzack/databag)                                        |
 | Docker Image Registry     | [Docker Hub](https://hub.docker.com/_/registry)                                     |
 | Dozzle                    | [GitHub](https://github.com/amir20/dozzle)                                          |
 | EdgeDB                    | [Official Website](https://edgedb.com/)                                             |

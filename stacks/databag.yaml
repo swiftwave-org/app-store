@@ -1,0 +1,58 @@
+services:
+  "{{STACK_NAME}}":
+    image: balzack/databag:latest
+    environment:
+      - "ADMIN={{ADMIN_PASSWORD}}"
+    volumes:
+      - "{{DATABAG_DATA}}:/var/lib/databag"
+    expose:
+      - "7000/http/Databag Endpoint"
+
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/databag.png"
+  name: "Databag"
+  description: "Fast & lightweight self-hosted messenger"
+  readme_description: >
+    **Databag** is designed for efficiency, consuming minimal hosting resources. Notable features include:
+
+    - Decentralized (direct communication between app and server node)
+    
+    - Federated (accounts on different nodes can communicate)
+    
+    - Public-Private key based identity (not bound to any blockchain or hosting domain)
+    
+    - End-to-End encryption (the hosting admin cannot view topics if sealed)
+    
+    - Audio and Video Calls (nat traversal requires separate relay server)
+    
+    - Topic based threads (messages organized by topic not contacts)
+    
+    - Unlimited participants (no limit on group thread members)
+    
+    - Lightweight (server can run on a raspberry pi zero v1.3)
+    
+    - Low latency (use of websockets for push events to avoid polling)
+    
+    - Unlimited accounts per node (host for your whole family)
+    
+    - Mobile alerts for new contacts, messages, and calls (supports UnifiedPush, FCM, APN)
+    
+    - Multi-Factor Authentication (integrates with TOTP apps)
+
+    ### Links
+
+    - Official Wesbite - [https://github.com/balzack/databag](https://github.com/balzack/databag)
+
+  iframe_video_embed: ""
+  variables:
+    ADMIN_PASSWORD:
+      title: "Admin Password"
+      description: "Password for administrator"
+      default: ""
+      type: text
+    DATABAG_DATA:
+      title: "Download Location"
+      description: "Storage to store downloaded content"
+      default: ""
+      type: volume
+      options:

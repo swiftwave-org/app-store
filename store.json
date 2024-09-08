@@ -52,6 +52,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/databag.png",
+		"title": "Communication",
+		"description": "Fast & lightweight self-hosted messenger",
+		"category": "Entertainment",
+		"stacks": [
+			{
+				"title": "Cloud Torrent",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/databag.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/dozzle.png",
 		"title": "Dozzle",
 		"description": "Real-time logging and monitoring for Docker in the browser",
