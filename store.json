@@ -275,6 +275,22 @@
 			}
 		]
 	},
+    {
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/penpot.png",
+		"title": "Penpot",
+		"description": "The open-source design tool for design and code collaboration",
+		"category": "Design",
+		"stacks": [
+			{
+				"title": "Penpot without SMTP",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/penpot-without-smtp.yaml"
+			},
+            {
+				"title": "Penpot with SMTP",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/penpot-with-smtp.yaml"
+			}
+		]
+	},
 	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/pgadmin.png",
 		"title": "pgAdmin 4",
