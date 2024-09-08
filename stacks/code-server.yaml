@@ -1,0 +1,54 @@
+services:
+  "{{STACK_NAME}}":
+    image: lscr.io/linuxserver/code-server:latest
+    environment:
+      - "PUID=1000"
+      - "PGID=1000"
+      - "TZ={{TIMEZONE}}"
+      - "PASSWORD={{PASSWORD}}"
+      - "SUDO_PASSWORD={{PASSWORD}}"
+    volumes:
+      - "{{CODE_SERVER_WORKSPACE}}:/config"
+    expose:
+      - "8443/http/Code Server Endpoint"
+
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/code-server.png"
+  name: "Code Server"
+  description: "VS Code in the browser"
+  readme_description: >
+    Run VS Code on any machine anywhere and access it in the browser.
+
+
+    **Features**
+
+    - Code on any device with a consistent development environment
+
+    - Use cloud servers to speed up tests, compilations, downloads, and more
+
+    - Preserve battery life when you're on the go; all intensive tasks run on your server
+
+    ### Links
+
+    - Official Wesbite - [https://github.com/coder/code-server](https://github.com/coder/code-server)
+
+  iframe_video_embed: ""
+  variables:
+    TIMEZONE:
+      title: "Timezone"
+      description: "Provide your timezone"
+      default: "Etc/UTC"
+      type: text
+      options:
+    PASSWORD:
+      title: "Code Server Password"
+      description: "Password for code server"
+      default: ""
+      type: text
+      options:
+    CODE_SERVER_WORKSPACE:
+      title: "Code Server Workspace Location"
+      description: "Storage to store code server workspace"
+      default: ""
+      type: volume
+      options:

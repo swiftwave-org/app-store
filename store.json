@@ -52,10 +52,22 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/code-server.png",
+		"title": "Code Server",
+		"description": "VS Code in the browser",
+		"category": "Dev Tools",
+		"stacks": [
+			{
+				"title": "Code Server",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/code-server.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/dozzle.png",
 		"title": "Dozzle",
 		"description": "Real-time logging and monitoring for Docker in the browser",
-		"category": "Docker Tools",
+		"category": "Dev Tools",
 		"stacks": [
 			{
 				"title": "Dozzle",
@@ -303,7 +315,7 @@
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/penpot.png",
 		"title": "Penpot",
 		"description": "The open-source design tool for design and code collaboration",
-		"category": "Design",
+		"category": "Dev Tools",
 		"stacks": [
 			{
 				"title": "Penpot without SMTP",
@@ -355,7 +367,7 @@
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/portainer.png",
 		"title": "Portainer",
 		"description": "Making Docker and Kubernetes management easy",
-		"category": "Docker Tools",
+		"category": "Dev Tools",
 		"stacks": [
 			{
 				"title": "Portainer",
