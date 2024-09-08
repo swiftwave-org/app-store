@@ -192,6 +192,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/minecraft.png",
+		"title": "Minecraft Server",
+		"description": "Minecraft server with dynamic version, server types, and modpack support",
+		"category": "Entertainment",
+		"stacks": [
+			{
+				"title": "Minecraft Server",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/minecraft-server.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mongodb.png",
 		"title": "MongoDB",
 		"description": "MongoDB is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program.",
@@ -275,7 +287,7 @@
 			}
 		]
 	},
-    {
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/penpot.png",
 		"title": "Penpot",
 		"description": "The open-source design tool for design and code collaboration",
@@ -285,7 +297,7 @@
 				"title": "Penpot without SMTP",
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/penpot-without-smtp.yaml"
 			},
-            {
+			{
 				"title": "Penpot with SMTP",
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/penpot-with-smtp.yaml"
 			}

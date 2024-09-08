@@ -23,6 +23,7 @@ _**Feel free to raise issue to add new app in the store**_
 | Grocy                     | [GitHub](https://github.com/grocy/grocy)                                            |
 | MariaDB                   | [Official Website](https://mariadb.org/)                                            |
 | Metube                    | [Github](https://github.com/alexta69/metube)                                        |
+| Minecraft Server          | [Docker Hub](https://hub.docker.com/r/itzg/minecraft-server)                        |
 | MongoDB                   | [Official Website](https://www.mongodb.com/)                                        |
 | MongoDB Backup S3         | [GitHub](https://github.com/swiftwave-org/app-store/tree/main/build/mongodb-backup) |
 | MySQL                     | [Official Website](https://www.mysql.com/)                                          |

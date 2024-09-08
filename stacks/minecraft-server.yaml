@@ -1,0 +1,28 @@
+services:
+  "{{STACK_NAME}}":
+    image: itzg/minecraft-server
+    environment:
+      - "EULA=TRUE"
+    volumes:
+      - "{{DATA_LOCATION}}:/data"
+    expose:
+      - "25565/tcp/Minecraft Server"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/minecraft.png"
+  name: "Minecraft"
+  description: "Minecraft server with dynamic version, server types, and modpack support"
+  readme_description: >
+    Minecraft server with dynamic version, server types, and modpack support
+
+    ### Links
+
+    - Docker Image - [https://hub.docker.com/r/itzg/minecraft-server](https://hub.docker.com/r/itzg/minecraft-server)
+
+  iframe_video_embed: ""
+  variables:
+    DATA_LOCATION:
+      title: "Minecraft Data Location"
+      description: "Storage to store minecraft server data"
+      default: ""
+      type: volume
+      options:
