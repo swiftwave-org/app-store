@@ -52,6 +52,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/couchdb.png",
+		"title": "CouchDB",
+		"description": "CouchDB is a database that uses JSON for documents, an HTTP API, & JavaScript/declarative indexing",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "CouchDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/couchdb.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/databag.png",
 		"title": "Databag",
 		"description": "Fast & lightweight self-hosted messenger",

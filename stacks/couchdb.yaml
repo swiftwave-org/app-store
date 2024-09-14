@@ -1,0 +1,46 @@
+services:
+  "{{STACK_NAME}}":
+    image: bitnami/couchdb:3
+    environment:
+      - "COUCHDB_USER={{COUCHDB_USER}}"
+      - "COUCHDB_PASSWORD={{COUCHDB_PASSWORD}}"
+      - "COUCHDB_SECRET={{RANDOM_COUCHDB_SECRET}}"
+    volumes:
+      - "{{DATA_LOCATION}}:/opt/bitnami/couchdb/etc"
+    expose:
+      - "5984/http/Coucdb Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/couchdb.png"
+  name: "CouchDB"
+  description: "CouchDB is a database that uses JSON for documents, an HTTP API, & JavaScript/declarative indexing."
+  readme_description: >
+    ### What is Apache CouchDB?
+
+    Apache CouchDB™ lets you access your data where you need it by defining the Couch Replication Protocol that is implemented by a variety of projects and products that span every imaginable computing environment from globally distributed server-clusters, over mobile phones to web browsers. Software that is compatible with the Couch Replication Protocol include PouchDB and Cloudant.
+
+    Store your data safely, on your own servers, or with any leading cloud provider. Your web- and native applications love CouchDB, because it speaks JSON natively and supports binary for all your data storage needs. The Couch Replication Protocol lets your data flow seamlessly between server clusters to mobile phones and web browsers, enabling a compelling, offline-first user-experience while maintaining high performance and strong reliability. CouchDB comes with a developer-friendly query language, and optionally MapReduce for simple, efficient, and comprehensive data retrieval.
+
+    ### Links
+
+    - Official Wesbite - [https://couchdb.apache.org](https://couchdb.apache.org)
+
+  iframe_video_embed: ""
+  variables:
+    COUCHDB_USER:
+      title: "CouchDB Username"
+      description: "CouchDB Username"
+      default: ""
+      type: text
+      options:
+    COUCHDB_PASSWORD:
+      title: "CouchDB Password"
+      description: "CouchDB Password"
+      default: ""
+      type: text
+      options:
+    DATA_LOCATION:
+      title: "Data Location"
+      description: "Storage for coucdb database"
+      default: ""
+      type: volume
+      options:
