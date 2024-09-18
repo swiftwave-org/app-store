@@ -2,7 +2,7 @@
 FROM alpine:3.18
 
 # Arguments for PocketBase version and architecture
-ARG PB_VERSION=0.22.21
+ARG PB_VERSION=0.22.13
 ARG TARGETARCH
 
 # Map TARGETARCH to the correct PocketBase architecture format
