@@ -9,7 +9,7 @@ ARG TARGETARCH
 RUN case "${TARGETARCH}" in \
     "amd64") export ARCH="amd64" ;; \
     "arm64") export ARCH="arm64" ;; \
-    "arm/v7") export ARCH="armv7" ;; \
+    "arm") export ARCH="armv7" ;; \
     *) echo "Unsupported architecture: ${TARGETARCH}" && exit 1 ;; \
     esac \
     && apk add --no-cache unzip ca-certificates wget \
