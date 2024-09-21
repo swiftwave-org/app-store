@@ -1,0 +1,39 @@
+services:
+  "{{STACK_NAME}}":
+    image: surrealdb/surrealdb:v2.0.1
+    command:
+      - /surreal
+      - start
+      - --user
+      - "{{USERNAME}}"
+      - --pass
+      - "{{PASSWORD}}"
+    expose:
+      - "8000/http/SurrealDB Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/surrealdb.png"
+  name: "SurrealDB"
+  description: "A scalable, distributed, collaborative, document-graph database, for the realtime web"
+  readme_description: >
+    ### What is SurrealDB?
+
+    SurrealDB is an end-to-end cloud-native database designed for modern applications, including web, mobile, serverless, Jamstack, backend, and traditional applications. With SurrealDB, you can simplify your database and API infrastructure, reduce development time, and build secure, performant apps quickly and cost-effectively.
+
+    ### Links
+
+    - Official Website - [https://surrealdb.com](https://surrealdb.com)
+
+  iframe_video_embed: ""
+  variables:
+    USERNAME:
+      title: "Username"
+      description: "Username for SurrealDB"
+      default: ""
+      type: text
+      options:
+    PASSWORD:
+      title: "Password"
+      description: "Password for SurrealDB"
+      default: ""
+      type: text
+      options:

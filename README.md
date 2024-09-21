@@ -41,6 +41,7 @@ _**Feel free to raise issue to add new app in the store**_
 | PostgreSQL Backup S3      | [GitHub](https://github.com/eeshugerman/postgres-backup-s3)                         |
 | Redis                     | [Official Website](https://redis.com/)                                              |
 | Supabase                  | [Official Website](https://supabase.com/)                                           |
+| SurrealDB                 | [Official Website](https://surrealdb.com/)                                          |
 | Uptime Kuma               | [GitHub](https://github.com/louislam/uptime-kuma)                                   |
 | Vaultwarden               | [Github](https://github.com/dani-garcia/vaultwarden)                                |
 | Wireguard VPN [wg-easy]   | [Github](https://github.com/wg-easy/wg-easy)                                        |

@@ -435,6 +435,18 @@
 			}
 		]
 	},
+    {
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/surrealdb.png",
+		"title": "SurrealDB",
+		"description": "A scalable, distributed, collaborative, document-graph database, for the realtime web",
+		"category": "Database",
+		"stacks": [
+			{
+				"title": "SurrealDB",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/surrealdb.yaml"
+			}
+		]
+	},
 	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/uptime-kuma.png",
 		"title": "Uptime Kuma",
