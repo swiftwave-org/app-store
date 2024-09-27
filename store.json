@@ -203,7 +203,7 @@
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/immich.png",
 		"title": "Immich",
 		"description": "Immich is a high-performance self-hosted photo and video backup solution",
-		"category": "Backup",
+		"category": "Storage",
 		"stacks": [
 			{
 				"title": "Immich",

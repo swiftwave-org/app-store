@@ -1,7 +1,7 @@
 minimum_swiftwave_version: "v2.2.7"
 
 services:
-  "{{STACK_NAME}}_immich-server":
+  "{{STACK_NAME}}_server":
     image: ghcr.io/immich-app/immich-server:release
     volumes:
       - "{{UPLOAD_LOCATION}}:/usr/src/app/upload"
@@ -47,7 +47,9 @@ docs:
     ## Links 
 
     - Official Website - [immich.app](https://immich.app/)
+
     - Documentation - [immich.app/docs](https://immich.app/docs)
+    
     - GitHub - [github.com/immich-app/immich](https://github.com/immich-app/immich)
 
     ## Note
