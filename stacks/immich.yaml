@@ -1,0 +1,76 @@
+minimum_swiftwave_version: "v2.2.7"
+
+services:
+  "{{STACK_NAME}}_immich-server":
+    image: ghcr.io/immich-app/immich-server:release
+    volumes:
+      - "{{UPLOAD_LOCATION}}:/usr/src/app/upload"
+    expose:
+      - "3001/http/Immich Server"
+    environment:
+      DB_HOSTNAME: "{{STACK_NAME}}_database"
+      DB_USERNAME: "immich"
+      DB_PASSWORD: "{{RANDOM_DB_PASSWORD}}"
+      REDIS_HOSTNAME: "{{STACK_NAME}}_redis"
+      UPLOAD_LOCATION: "/usr/src/app/upload"
+      IMMICH_MACHINE_LEARNING_ENABLED: "false"
+      DB_DATABASE_NAME: "immich"
+    preferred_server_hostnames:
+      - "{{IMMICH_DEPLOYMENT_SERVER}}"
+
+  "{{STACK_NAME}}_redis":
+    image: docker.io/redis:6.2-alpine
+    preferred_server_hostnames:
+      - "{{IMMICH_DEPLOYMENT_SERVER}}"
+
+  "{{STACK_NAME}}_database":
+    image: docker.io/tensorchord/pgvecto-rs:pg14-v0.2.0
+    environment:
+      POSTGRES_PASSWORD: "{{RANDOM_DB_PASSWORD}}"
+      POSTGRES_USER: "immich"
+      POSTGRES_DB: "immich"
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    volumes:
+      - "{{DB_DATA_LOCATION}}:/var/lib/postgresql/data"
+    preferred_server_hostnames:
+      - "{{IMMICH_DEPLOYMENT_SERVER}}"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/immich.png"
+  name: "Immich"
+  description: "Immich is a high-performance self-hosted photo and video backup solution"
+  readme_description: >
+    ## What is Immich?
+
+    Immich is a high-performance self-hosted photo and video backup solution.
+    It provides a fast, reliable way to back up and access your personal media library.
+
+    ## Links 
+
+    - Official Website - [immich.app](https://immich.app/)
+    - Documentation - [immich.app/docs](https://immich.app/docs)
+    - GitHub - [github.com/immich-app/immich](https://github.com/immich-app/immich)
+
+    ## Note
+
+    - After deployment, open the `Immich Server` app and go to the domain name you provided to access the dashboard.
+
+  iframe_video_embed: ""
+  variables:
+    IMMICH_DEPLOYMENT_SERVER:
+      title: "Immich Server"
+      description: "The server to deploy Immich"
+      default: ""
+      type: server
+      options:
+    UPLOAD_LOCATION:
+      title: "Upload Location"
+      description: "The storage location for uploads"
+      default: ""
+      type: volume
+      options:
+    DB_DATA_LOCATION:
+      title: "Database Data Location"
+      description: "The storage location for database data"
+      default: ""
+      type: volume
+      options:

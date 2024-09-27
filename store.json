@@ -200,6 +200,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/immich.png",
+		"title": "Immich",
+		"description": "Immich is a high-performance self-hosted photo and video backup solution",
+		"category": "Backup",
+		"stacks": [
+			{
+				"title": "Immich",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/immich.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/mariadb.png",
 		"title": "MariaDB",
 		"description": "MariaDB is an open source, community-developed SQL database server",
@@ -435,7 +447,7 @@
 			}
 		]
 	},
-    {
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/surrealdb.png",
 		"title": "SurrealDB",
 		"description": "A scalable, distributed, collaborative, document-graph database, for the realtime web",

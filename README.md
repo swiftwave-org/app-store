@@ -24,6 +24,7 @@ _**Feel free to raise issue to add new app in the store**_
 | Ghost                     | [Official Website](https://ghost.org/)                                              |
 | Grafana                   | [GitHub](https://github.com/grafana/grafana)                                        |
 | Grocy                     | [GitHub](https://github.com/grocy/grocy)                                            |
+| Immich                    | [Official Website](https://immich.app/)                                             |
 | MariaDB                   | [Official Website](https://mariadb.org/)                                            |
 | Metube                    | [Github](https://github.com/alexta69/metube)                                        |
 | Minecraft Server          | [Docker Hub](https://hub.docker.com/r/itzg/minecraft-server)                        |
