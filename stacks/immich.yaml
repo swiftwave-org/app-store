@@ -2,7 +2,7 @@ minimum_swiftwave_version: "v2.2.7"
 
 services:
   "{{STACK_NAME}}_server":
-    image: ghcr.io/immich-app/immich-server:release
+    image: "ghcr.io/immich-app/immich-server:{{VERSION}}"
     volumes:
       - "{{UPLOAD_LOCATION}}:/usr/src/app/upload"
     expose:
@@ -58,6 +58,18 @@ docs:
 
   iframe_video_embed: ""
   variables:
+    VERSION:
+      title: "Version"
+      description: "Choose the version of Immich"
+      default: "release"
+      type: options
+      options:
+        - title: "Latest"
+          value: "release"
+        - title: "1.116.0"
+          value: "v1.116.0"
+        - title: "1.115.0"
+          value: "v1.115.0"
     IMMICH_DEPLOYMENT_SERVER:
       title: "Immich Server"
       description: "The server to deploy Immich"
