@@ -1,0 +1,86 @@
+services:
+  "{{STACK_NAME}}_postiz_core":
+    image: ghcr.io/gitroomhq/postiz-app:latest
+    environment:
+      - "MAIN_URL={{PUBLIC_URL}}"
+      - "FRONTEND_URL={{PUBLIC_URL}}"
+      - "NEXT_PUBLIC_BACKEND_URL={{PUBLIC_URL}}/api"
+      - "JWT_SECRET={{RANDOM_JWT_SECRET}}"
+      - "DATABASE_URL=postgresql://{{RANDOM_POSTGRES_USER}}:{{RANDOM_POSTGRES_PASSWORD}}@{{STACK_NAME}}_postiz_db:5432/postiz"
+      - "REDIS_URL=redis://{{STACK_NAME}}_postiz_redis:6379"
+      - "BACKEND_INTERNAL_URL=http://localhost:3000"
+      - "IS_GENERAL=true"
+      - "STORAGE_PROVIDER=local"
+      - "UPLOAD_DIRECTORY=/uploads"
+      - "NEXT_PUBLIC_UPLOAD_DIRECTORY=/uploads"
+
+    volumes:
+      - "{{POSTIZ_CONFIG_STORAGE}}:/config"
+      - "{{POSTIZ_UPLOAD_STORAGE}}:/uploads"
+    expose:
+      - "5000/http/Postiz Endpoint"
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
+
+  "{{STACK_NAME}}_postiz_db":
+    image: postgres:17-alpine
+    environment:
+      - "POSTGRES_DB=postiz"
+      - "POSTGRES_USER={{RANDOM_POSTGRES_USER}}"
+      - "POSTGRES_PASSWORD={{RANDOM_POSTGRES_PASSWORD}}"
+    volumes:
+      - "{{POSTGRES_STORAGE}}:/var/lib/postgresql/data"
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
+
+  "{{STACK_NAME}}_postiz_redis":
+    image: redis:7.2
+    preferred_server_hostnames:
+      - "{{DEPLOYMENT_SERVER}}"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postiz.png"
+  name: "Postiz"
+  description: "The ultimate social media scheduling tool, with a bunch of AI"
+  readme_description: >
+    ### What is Postiz ?
+
+    📨 The ultimate social media scheduling tool, with a bunch of AI 🤖. Postiz offers everything you need to manage your social media posts. Build an audience, capture leads, and grow your business. 
+
+    ### Links
+
+    - Official Wesbite - [postiz.com](https://postiz.com/)
+
+    - GitHub - [github.com/gitroomhq/postiz-app](https://github.com/gitroomhq/postiz-app)
+
+  iframe_video_embed: ""
+  variables:
+    DEPLOYMENT_SERVER:
+      title: "Deployment Server"
+      description: "The server to deploy postiz"
+      default: ""
+      type: server
+      options:
+    PUBLIC_URL:
+      title: "Public URL for Postiz"
+      description: "i.e. https://example.com"
+      default: ""
+      type: text
+      options:
+    POSTIZ_CONFIG_STORAGE:
+      title: "Postiz Config Storage"
+      description: "The storage location for Penpot Config"
+      default: ""
+      type: volume
+      options:
+    POSTIZ_UPLOAD_STORAGE:
+      title: "Postiz Uload Storage"
+      description: "The storage location for Penpot Upload"
+      default: ""
+      type: volume
+      options:
+    POSTGRES_STORAGE:
+      title: "Database Data Storage"
+      description: "The data storage for Postgres DB"
+      default: ""
+      type: volume
+      options:
