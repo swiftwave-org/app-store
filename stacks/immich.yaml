@@ -15,6 +15,7 @@ services:
       UPLOAD_LOCATION: "/usr/src/app/upload"
       IMMICH_MACHINE_LEARNING_ENABLED: "false"
       DB_DATABASE_NAME: "immich"
+      IMMICH_PORT: 3001
     preferred_server_hostnames:
       - "{{IMMICH_DEPLOYMENT_SERVER}}"
 
