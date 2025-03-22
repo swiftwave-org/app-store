@@ -531,7 +531,7 @@
 		"stacks": [
 			{
 				"title": "PostgreSQL - Supabase extentions",
-				"stack": "https://raw.githubusercontent.com/that0n3guy/app-store/main/stacks/postegres-supabase-extensions.yaml"
+				"stack": "https://github.com/that0n3guy/app-store/blob/supabase-postgres/stacks/postgresql-supabase-extensions.yaml"
 			}
 		]
 	}
