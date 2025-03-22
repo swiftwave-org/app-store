@@ -1,0 +1,69 @@
+services:
+  "{{STACK_NAME}}":
+    image: supabase/postgres:{{POSTGRESQL_VERSION}}
+    environment:
+      - "POSTGRESQL_DATABASE={{POSTGRESQL_DATABASE}}"
+      - "POSTGRESQL_USERNAME={{POSTGRESQL_USERNAME}}"
+      - "POSTGRESQL_PASSWORD={{POSTGRESQL_PASSWORD}}"
+      - "POSTGRESQL_TIMEZONE={{POSTGRESQL_TIMEZONE}}"
+    volumes:
+      - "{{POSTGRESQL_STORAGE}}:/var/lib/postgresql/data"
+    expose:
+      - "5432/tcp/PostgreSQL Endpoint"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png"
+  name: "PostgreSQL-Supabase"
+  description: "PostgreSQL + goodies (Postgres) is an open source object-relational database known for reliability and data integrity"
+  readme_description: >    
+    Postgres + goodies Unmodified Postgres with some useful plugins. Our goal with this repo is not to modify Postgres, but to provide some of the most common extensions with a one-click install.
+    View https://github.com/supabase/postgres for extensions available.
+    
+    ### What is PostgreSQL?
+
+    PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+
+    ### Note
+
+    During the installation procedure, the Bitnami PostgreSQL image will be utilised. More information: [hub.docker.com/r/bitnami/postgresql](https://hub.docker.com/r/bitnami/postgresql)
+
+
+    ### Links
+
+    - Official Wesbite - [www.postgresql.org](https://www.postgresql.org/)
+
+  iframe_video_embed: ""
+  variables:
+    POSTGRESQL_VERSION:
+      title: "PostgreSQL Version"
+      description: "Choose the version as per requirement"
+      default: "15.6.1.113"
+      type: text
+    POSTGRESQL_DATABASE:
+      title: "PostgreSQL Database"
+      description: "Initial Database name"
+      default: ""
+      type: text
+      options:
+    POSTGRESQL_USERNAME:
+      title: "PostgreSQL Username"
+      description: "Username of postgresql user"
+      default: ""
+      type: text
+      options:
+    POSTGRESQL_PASSWORD:
+      title: "PostgreSQL Password"
+      description: "Password of postgresql user"
+      default: ""
+      type: text
+      options:
+    POSTGRESQL_TIMEZONE:
+      title: "PostgreSQL Timezone"
+      description: "Provide a valid timezone. Check postgresql.org/docs/7.2/timezones.html"
+      default: "UTC"
+      type: text
+    POSTGRESQL_STORAGE:
+      title: "PostgreSQL Data Storage"
+      description: "The data storage for PostgreSQL"
+      default: ""
+      type: volume
+      options:
