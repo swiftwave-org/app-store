@@ -35,29 +35,12 @@ docs:
       description: "Choose the version as per requirement"
       default: "15.6.1.113"
       type: text
-    POSTGRESQL_DATABASE:
-      title: "PostgreSQL Database"
-      description: "Initial Database name"
-      default: ""
-      type: text
-      options:
-    POSTGRESQL_USERNAME:
-      title: "PostgreSQL Username"
-      description: "Username of postgresql user"
-      default: ""
-      type: text
-      options:
-    POSTGRESQL_PASSWORD:
+    POSTGRES_PASSWORD:
       title: "PostgreSQL Password"
       description: "Password of postgresql user"
       default: ""
       type: text
       options:
-    POSTGRESQL_TIMEZONE:
-      title: "PostgreSQL Timezone"
-      description: "Provide a valid timezone. Check postgresql.org/docs/7.2/timezones.html"
-      default: "UTC"
-      type: text
     POSTGRESQL_STORAGE:
       title: "PostgreSQL Data Storage"
       description: "The data storage for PostgreSQL"
