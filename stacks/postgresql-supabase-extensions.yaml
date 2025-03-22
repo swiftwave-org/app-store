@@ -2,10 +2,7 @@ services:
   "{{STACK_NAME}}":
     image: supabase/postgres:{{POSTGRESQL_VERSION}}
     environment:
-      - "POSTGRESQL_DATABASE={{POSTGRESQL_DATABASE}}"
-      - "POSTGRESQL_USERNAME={{POSTGRESQL_USERNAME}}"
-      - "POSTGRESQL_PASSWORD={{POSTGRESQL_PASSWORD}}"
-      - "POSTGRESQL_TIMEZONE={{POSTGRESQL_TIMEZONE}}"
+      - "POSTGRES_PASSWORD={{POSTGRESQL_PASSWORD}}"
     volumes:
       - "{{POSTGRESQL_STORAGE}}:/var/lib/postgresql/data"
     expose:
