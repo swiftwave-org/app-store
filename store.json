@@ -304,6 +304,18 @@
 		]
 	},
 	{
+		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/n8n.png",
+		"title": "n8n",
+		"description": "The world's most popular workflow automation platform for technical teams",
+		"category": "Visual Programming",
+		"stacks": [
+			{
+				"title": "n8n",
+				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/n8n.yaml"
+			}
+		]
+	},
+	{
 		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/nextcloud.png",
 		"title": "NextCloud",
 		"description": "A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms",
