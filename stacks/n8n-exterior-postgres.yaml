@@ -21,7 +21,7 @@ services:
       - "5678/http/N8N Endpoint"
 
 docs:
-  logo_url: "https://n8n.io/images/n8n-logo.png"
+  logo_url: "https://avatars.githubusercontent.com/u/45487711?s=200&v=4"
   name: "n8n"
   description: "Workflow automation tool for connecting various services and APIs"
   readme_description: >
@@ -57,12 +57,12 @@ docs:
       type: text
     POSTGRES_HOST:
       title: "PostgreSQL Host"
-      description: "Address of external PostgreSQL server"
+      description: "Address (ip or url) of external PostgreSQL server"
       default: ""
       type: text
     POSTGRES_DB:
       title: "PostgreSQL Database"
-      description: "Name of the PostgreSQL database"
+      description: "Name of the database in PostgreSQL"
       default: "n8n"
       type: text
     POSTGRES_USER:

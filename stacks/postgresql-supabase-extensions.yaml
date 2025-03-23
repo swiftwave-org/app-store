@@ -8,7 +8,7 @@ services:
     expose:
       - "5432/tcp/PostgreSQL Endpoint"
 docs:
-  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgresql.png"
+  logo_url: "https://avatars.githubusercontent.com/u/54469796?s=200&v=4"
   name: "PostgreSQL-Supabase"
   description: "PostgreSQL + goodies (Postgres) is an open source object-relational database known for reliability and data integrity"
   readme_description: >    
@@ -32,12 +32,12 @@ docs:
   variables:
     POSTGRES_VERSION:
       title: "PostgreSQL Version"
-      description: "Choose the version as per requirement"
+      description: "Choose the version, must be a valid docker tagged version."
       default: "15.6.1.113"
       type: text
     POSTGRES_PASSWORD:
       title: "PostgreSQL Password"
-      description: "Password of postgresql user"
+      description: "Password of postgres user.  By default the main user will be: postgres"
       default: ""
       type: text
       options:

@@ -522,17 +522,5 @@
 				"stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/yt-dlp-web-gui.yaml"
 			}
 		]
-	},
-	{
-		"logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/yt-dlp-web-gui.png",
-		"title": "PostgreSQL - Supabase extentions",
-		"description": "Unmodified Postgres with some useful plugins.",
-		"category": "Database",
-		"stacks": [
-			{
-				"title": "PostgreSQL - Supabase extentions",
-				"stack": "https://github.com/that0n3guy/app-store/blob/supabase-postgres/stacks/postgresql-supabase-extensions.yaml"
-			}
-		]
 	}
 ]
