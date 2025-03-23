@@ -1,0 +1,57 @@
+services:
+  "{{STACK_NAME}}_n8n":
+    image: docker.n8n.io/n8nio/n8n
+    environment:
+      - "DB_TYPE=postgresdb"
+      - "DB_POSTGRESDB_DATABASE=db_{{RANDOM_DB_NAME}}"
+      - "DB_POSTGRESDB_USER=user_{{RANDOM_DB_USERNAME}}"
+      - "DB_POSTGRESDB_PASSWORD={{RANDOM_DB_PASSWORD}}"
+      - "DB_POSTGRESDB_HOST={{STACK_NAME}}_postgres"
+      - "DB_POSTGRESDB_PORT=5432"
+    volumes:
+      - "{{N8N_STORAGE}}:/home/node/.n8n"
+    expose:
+      - "5678/http/Nextcloud Endpoint"
+  "{{STACK_NAME}}_postgres":
+    image: bitnami/postgresql:16
+    environment:
+      - "POSTGRESQL_DATABASE=db_{{RANDOM_DB_NAME}}"
+      - "POSTGRESQL_USERNAME=user_{{RANDOM_DB_USERNAME}}"
+      - "POSTGRESQL_PASSWORD={{RANDOM_DB_PASSWORD}}"
+      - "POSTGRESQL_TIMEZONE={{POSTGRESQL_TIMEZONE}}"
+    volumes:
+      - "{{POSTGRESQL_STORAGE}}:/bitnami/postgresql"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/n8n.png"
+  name: "n8n"
+  description: "The world's most popular workflow automation platform for technical teams"
+  readme_description: >
+    ### What is n8n?
+
+    The world's most popular workflow automation platform for technical teams.
+
+    ### Links
+
+    - Official Wesbite - [n8n.io](https://n8n.io/)
+
+    - GitHub - [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n)
+
+  iframe_video_embed: ""
+  variables:
+    POSTGRESQL_TIMEZONE:
+      title: "PostgreSQL Timezone"
+      description: "Provide a valid timezone. Check postgresql.org/docs/7.2/timezones.html"
+      default: "UTC"
+      type: text
+    N8N_STORAGE:
+      title: "n8n Data Storage"
+      description: "The data storage for n8n"
+      default: ""
+      type: volume
+      options:
+    POSTGRESQL_STORAGE:
+      title: "PostgreSQL Data Storage"
+      description: "The data storage for PostgreSQL"
+      default: ""
+      type: volume
+      options:
