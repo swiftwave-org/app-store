@@ -1,0 +1,49 @@
+services:
+  "{{STACK_NAME}}":
+    image: supabase/postgres:{{POSTGRES_VERSION}}
+    environment:
+      - "POSTGRES_PASSWORD={{POSTGRES_PASSWORD}}"
+    volumes:
+      - "{{POSTGRES_STORAGE}}:/var/lib/postgresql/data"
+    expose:
+      - "5432/tcp/PostgreSQL Endpoint"
+docs:
+  logo_url: "https://avatars.githubusercontent.com/u/54469796?s=200&v=4"
+  name: "PostgreSQL-Supabase"
+  description: "PostgreSQL + goodies (Postgres) is an open source object-relational database known for reliability and data integrity"
+  readme_description: >    
+    Postgres + goodies Unmodified Postgres with some useful plugins. Our goal with this repo is not to modify Postgres, but to provide some of the most common extensions with a one-click install.
+    View https://github.com/supabase/postgres for extensions available.
+    
+    ### What is PostgreSQL?
+
+    PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+
+    ### Note
+
+    During the installation procedure, the Supabase PostgreSQL image will be utilised. More information: [https://github.com/supabase/postgres](https://github.com/supabase/postgres)
+
+
+    ### Links
+
+    - Official Wesbite - [www.postgresql.org](https://www.postgresql.org/)
+
+  iframe_video_embed: ""
+  variables:
+    POSTGRES_VERSION:
+      title: "PostgreSQL Version"
+      description: "Choose the version, must be a valid docker tagged version."
+      default: "15.6.1.113"
+      type: text
+    POSTGRES_PASSWORD:
+      title: "PostgreSQL Password"
+      description: "Password of postgres user.  By default the main user will be: postgres"
+      default: ""
+      type: text
+      options:
+    POSTGRES_STORAGE:
+      title: "PostgreSQL Data Storage"
+      description: "The data storage for PostgreSQL"
+      default: ""
+      type: volume
+      options:

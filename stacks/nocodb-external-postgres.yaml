@@ -1,0 +1,56 @@
+services:
+  "{{STACK_NAME}}":
+    image: nocodb/nocodb
+    environment:
+      - "NC_DB=pg://{{POSTGRES_HOST}}:5432?u={{POSTGRES_USER}}&p={{POSTGRES_PASSWORD}}&d={{POSTGRES_DB}}"
+      - "NC_AUTH_JWT_SECRET={{JWT_SECRET}}"
+    volumes:
+      - "{{NOCODB_DATA}}:/usr/app/data/"
+    expose:
+      - "8080/http/NocoDB Endpoint"
+
+docs:
+  logo_url: "https://avatars.githubusercontent.com/u/50206778?s=200&v=4"
+  name: "NocoDB"
+  description: "Open Source Airtable Alternative - Turns any database into a smart spreadsheet"
+  readme_description: >
+    ### What is NocoDB?
+    
+    NocoDB is an open source no-code platform that turns any database into a smart spreadsheet. Consider it as an Airtable alternative.
+    
+    ### Links
+    
+    - Official Website - [nocodb.com](https://nocodb.com/)
+    - GitHub - [github.com/nocodb/nocodb](https://github.com/nocodb/nocodb)
+  iframe_video_embed: ""
+  variables:
+    POSTGRES_HOST:
+      title: "PostgreSQL Host"
+      description: "Hostname (ip or domain) of PostgreSQL server"
+      default: ""
+      type: text
+    POSTGRES_USER:
+      title: "PostgreSQL User"
+      description: "Username for PostgreSQL database"
+      default: ""
+      type: text
+    POSTGRES_PASSWORD:
+      title: "PostgreSQL Password"
+      description: "Password for PostgreSQL database"
+      default: ""
+      type: text
+    POSTGRES_DB:
+      title: "PostgreSQL Database"
+      description: "Name of the PostgreSQL database"
+      default: "nocodb"
+      type: text
+    JWT_SECRET:
+      title: "JWT Secret"
+      description: "Secret key for JWT authentication"
+      default: ""
+      type: text
+    NOCODB_DATA:
+      title: "NocoDB Data Storage"
+      description: "The data storage for NocoDB"
+      default: ""
+      type: volume
