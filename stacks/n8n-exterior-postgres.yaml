@@ -35,7 +35,7 @@ docs:
     - GitHub - [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n)
   iframe_video_embed: ""
   variables:
-    SERVICE_PROTOCOL
+    SERVICE_PROTOCOL:
       title: "Service Protocol"
       description: "http or https?"
       default: "https"
