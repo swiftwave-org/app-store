@@ -1,0 +1,82 @@
+services:
+  "{{STACK_NAME}}":
+    image: docker.n8n.io/n8nio/n8n
+    environment:
+      - "N8N_HOST={{SERVICE_FQDN}}"
+      - "N8N_PORT=5678"
+      - "N8N_PROTOCOL={{SERVICE_PROTOCOL}}"
+      - "WEBHOOK_URL={{SERVICE_PROTOCOL}}://{{SERVICE_FQDN}}/"
+      - "GENERIC_TIMEZONE={{TIMEZONE}}"
+      - "TZ={{TIMEZONE}}"
+      - "DB_TYPE=postgresdb"
+      - "DB_POSTGRESDB_DATABASE={{POSTGRES_DB}}"
+      - "DB_POSTGRESDB_HOST={{POSTGRES_HOST}}"
+      - "DB_POSTGRESDB_PORT=5432"
+      - "DB_POSTGRESDB_USER={{POSTGRES_USER}}"
+      - "DB_POSTGRESDB_SCHEMA=public"
+      - "DB_POSTGRESDB_PASSWORD={{POSTGRES_PASSWORD}}"
+    volumes:
+      - "{{N8N_DATA}}:/home/node/.n8n"
+    expose:
+      - "5678/http/N8N Endpoint"
+
+docs:
+  logo_url: "https://n8n.io/images/n8n-logo.png"
+  name: "n8n"
+  description: "Workflow automation tool for connecting various services and APIs"
+  readme_description: >
+    ### What is n8n?
+    
+    n8n is a free and open fair-code licensed workflow automation tool that enables you to connect various services and APIs without writing any code.
+    
+    ### Links
+    
+    - Official Website - [n8n.io](https://n8n.io/)
+    - GitHub - [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n)
+  iframe_video_embed: ""
+  variables:
+    SERVICE_PROTOCOL
+      title: "Service Protocol"
+      description: "http or https?"
+      default: "https"
+      type: options
+      options:
+      - title: "https"
+        value: "https"
+      - title: "http"
+        value: "http"
+    SERVICE_FQDN:
+      title: "Service FQDN"
+      description: "Fully Qualified Domain Name for n8n service.   Ex: n8n.google.com"
+      default: "n8n.yourdomainname.com"
+      type: text
+    TIMEZONE:
+      title: "Timezone"
+      description: "Timezone for n8n service"
+      default: "America/Chicago"
+      type: text
+    POSTGRES_HOST:
+      title: "PostgreSQL Host"
+      description: "Address of external PostgreSQL server"
+      default: ""
+      type: text
+    POSTGRES_DB:
+      title: "PostgreSQL Database"
+      description: "Name of the PostgreSQL database"
+      default: "n8n"
+      type: text
+    POSTGRES_USER:
+      title: "PostgreSQL User"
+      description: "Username for PostgreSQL database"
+      default: "postgres"
+      type: text
+    POSTGRES_PASSWORD:
+      title: "PostgreSQL Password"
+      description: "Password for PostgreSQL database"
+      default: ""
+      type: text
+    N8N_DATA:
+      title: "n8n Data Storage"
+      description: "The data storage for n8n"
+      default: ""
+      type: volume
